@@ -1,96 +1,2398 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-  </body>
+<html lang="ko" id="htmlLang">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">🧴 AI 피부 나이 테스트 | 스킨케어 관리법 추천</title>
+    <meta name="description" content="AI가 분석하는 정확한 피부 나이 테스트! 피부 상태 분석과 맞춤형 스킨케어 루틴을 추천받아보세요" id="pageDescription">
+    <meta name="keywords" content="피부나이테스트,스킨케어,피부분석,AI피부진단,뷰티테스트,피부관리,안티에이징,skincare,skin age test">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="🧴 AI 피부 나이 테스트 - 스킨케어 관리법 추천" id="ogTitle">
+    <meta property="og:description" content="AI가 분석하는 정확한 피부 나이 측정과 맞춤형 스킨케어 루틴 추천!" id="ogDescription">
+    <meta property="og:image" content="https://your-domain.com/skin-age-og.jpg">
+    <meta property="og:url" content="https://your-domain.com">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G25HV67JG6"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G25HV67JG6');
+    </script>
+
+    <!-- 카카오 SDK -->
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"></script>
+
+    <style>
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #FFE5F1 0%, #FFB7D3 50%, #FFA8CC 100%);
+            min-height: 100vh;
+            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:pink;stop-opacity:0.6"/><stop offset="100%" style="stop-color:white;stop-opacity:0"/></radialGradient></defs><circle cx="25" cy="25" r="2" fill="url(%23glow)"/><circle cx="75" cy="20" r="1.5" fill="url(%23glow)"/><circle cx="60" cy="70" r="1.8" fill="url(%23glow)"/><circle cx="20" cy="80" r="1.2" fill="url(%23glow)"/><circle cx="85" cy="65" r="1" fill="url(%23glow)"/></svg>') repeat;
+            animation: beauty-float 10s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes beauty-float {
+            0%, 100% { opacity: 0.4; transform: translateY(0px) rotate(0deg); }
+            50% { opacity: 0.8; transform: translateY(-20px) rotate(180deg); }
+        }
+
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px;
+            border-radius: 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            background: transparent;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .lang-btn.active {
+            background: linear-gradient(45deg, #FF69B4, #FFB6C1);
+            color: white;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 105, 180, 0.2);
+        }
+
+        .lang-btn.active:hover {
+            background: linear-gradient(45deg, #FF69B4, #FFB6C1);
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header {
+            text-align: center;
+            background: rgba(255,255,255,0.95);
+            padding: 2rem 1rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .header h1 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #FF69B4, #FFB6C1, #FFA8CC, #FF91A4);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            background-size: 300% 300%;
+            animation: beauty-gradient 4s ease-in-out infinite;
+        }
+
+        @keyframes beauty-gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            background: linear-gradient(45deg, #FFE5F1, #FFD6E8);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            color: #666;
+            border: 1px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .upload-section {
+            background: rgba(255,255,255,0.95);
+            padding: 1.5rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border: 2px dashed #FF69B4;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+        }
+
+        .upload-section:hover {
+            border-color: #FFB6C1;
+            background: rgba(255, 105, 180, 0.05);
+        }
+
+        .upload-section.dragover {
+            border-color: #FFB6C1 !important;
+            background: rgba(255, 105, 180, 0.1) !important;
+            transform: scale(1.02);
+        }
+
+        .input-section {
+            background: rgba(255,255,255,0.95);
+            padding: 1.5rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-label {
+            font-weight: bold;
+            color: #FF69B4;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-input, .form-select {
+            padding: 0.8rem;
+            border: 2px solid #FFE5F1;
+            border-radius: 10px;
+            font-size: 1rem;
+            background: white;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus, .form-select:focus {
+            outline: none;
+            border-color: #FF69B4;
+        }
+        
+        .file-input-wrapper {
+            position: relative;
+            display: inline-block;
+            margin: 1rem 0;
+        }
+        
+        .file-input {
+            display: none;
+        }
+        
+        .file-input-button {
+            background: linear-gradient(45deg, #FF69B4, #FFB6C1);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .file-input-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
+        }
+        
+        .preview-container {
+            margin: 1rem 0;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .preview-image {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .analyze-button {
+            background: linear-gradient(45deg, #FF69B4, #FFB6C1);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            margin-top: 1rem;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 350px;
+        }
+        
+        .analyze-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
+        }
+
+        .analyze-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #FF69B4;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .result-section {
+            background: rgba(255,255,255,0.95);
+            padding: 2rem 1rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            display: none;
+            backdrop-filter: blur(10px);
+        }
+        
+        .skin-result {
+            background: linear-gradient(45deg, #FFE5F1, #FFD6E8, #FFF0F5);
+            padding: 2rem 1.5rem;
+            border-radius: 20px;
+            margin: 1rem 0;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+
+        .skin-result::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 105, 180, 0.2) 0%, transparent 70%);
+            animation: beauty-shimmer 6s ease-in-out infinite;
+        }
+        
+        @keyframes beauty-shimmer {
+            0%, 100% { opacity: 0.3; transform: rotate(0deg); }
+            50% { opacity: 0.6; transform: rotate(180deg); }
+        }
+        
+        .skin-age-display {
+            font-size: clamp(4rem, 10vw, 6rem);
+            margin: 1rem 0;
+            position: relative;
+            z-index: 1;
+            color: #FF69B4;
+            font-weight: bold;
+            animation: gentle-pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes gentle-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .skin-status {
+            font-size: clamp(1.5rem, 5vw, 2.2rem);
+            margin: 1rem 0;
+            color: #FF69B4;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+        }
+
+        .skin-description {
+            font-size: 1.1rem;
+            color: #666;
+            margin: 1rem 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .skincare-routine {
+            background: linear-gradient(45deg, #FFF8DC, #FFE5F1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+            text-align: left;
+            border: 1px solid rgba(255, 105, 180, 0.3);
+        }
+
+        .skincare-routine h3 {
+            color: #FF69B4;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .routine-steps {
+            background: linear-gradient(45deg, #E1F5FE, #FFE5F1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .step-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 105, 180, 0.2);
+        }
+
+        .step-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .step-emoji {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .step-title {
+            font-weight: bold;
+            color: #FF69B4;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-text {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .skin-score {
+            background: linear-gradient(45deg, #FF69B4, #FFB6C1);
+            color: white;
+            padding: 1rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .product-recommendations {
+            background: linear-gradient(45deg, #DDA0DD, #FFB6C1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+            border: 1px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .share-buttons {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .share-button {
+            color: white;
+            padding: 0.7rem 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .share-button:hover {
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        .share-button.kakao {
+            background: linear-gradient(45deg, #FEE500, #FFEB3B);
+            color: #3A1D1D;
+        }
+
+        .share-button.kakao:hover {
+            color: #3A1D1D;
+        }
+
+        .share-button.twitter {
+            background: linear-gradient(45deg, #1DA1F2, #0D8BD9);
+        }
+
+        .share-button.facebook {
+            background: linear-gradient(45deg, #1877F2, #42A5F5);
+        }
+
+        .share-button.instagram {
+            background: linear-gradient(45deg, #E4405F, #9B59B6);
+        }
+
+        .share-button.general {
+            background: linear-gradient(45deg, #FF69B4, #FFB6C1);
+        }
+
+        #shareCanvas {
+            display: none;
+        }
+        
+        .related-tests {
+            background: rgba(255,255,255,0.95);
+            padding: 1.5rem;
+            border-radius: 20px;
+            margin: 1rem 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .test-card {
+            background: linear-gradient(45deg, #FF69B4, #FFB6C1);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        
+        .test-card:hover {
+            transform: translateY(-5px);
+            color: white;
+        }
+        
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #FF69B4, #FFB6C1);
+            color: white;
+            padding: 1rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            cursor: pointer;
+            z-index: 1000;
+            animation: beauty-pulse 2s infinite;
+        }
+        
+        @keyframes beauty-pulse {
+            0% { transform: scale(1); box-shadow: 0 4px 20px rgba(255, 105, 180, 0.3); }
+            50% { transform: scale(1.05); box-shadow: 0 8px 30px rgba(255, 182, 193, 0.4); }
+            100% { transform: scale(1); box-shadow: 0 4px 20px rgba(255, 105, 180, 0.3); }
+        }
+
+        .footer {
+            background: rgba(255,255,255,0.95);
+            padding: 2rem 1rem;
+            border-radius: 20px;
+            margin-top: 2rem;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .footer a {
+            color: #FF69B4;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #FFB6C1;
+        }
+        
+        @media (max-width: 768px) {
+            .container { padding: 5px; }
+            .steps-grid { grid-template-columns: 1fr; }
+            .form-grid { grid-template-columns: 1fr; }
+            .language-switcher { 
+                position: relative;
+                top: auto;
+                right: auto;
+                justify-content: center;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 언어 전환 버튼 -->
+    <div class="language-switcher">
+        <button class="lang-btn active" onclick="switchLanguage('ko')" id="koBtn">한국어</button>
+        <button class="lang-btn" onclick="switchLanguage('en')" id="enBtn">English</button>
+    </div>
+
+    <div class="container">
+        <!-- 헤더 -->
+        <div class="header">
+            <h1 id="mainTitle">🧴 AI 피부 나이 테스트</h1>
+            <p id="mainSubtitle">AI가 당신의 얼굴을 분석해 정확한 피부 나이와 맞춤형 스킨케어 루틴을 추천해드립니다!</p>
+            <div class="stats">
+                <span class="stat-item" id="stat1">📊 누적 분석 456,789명</span>
+                <span class="stat-item" id="stat2">🎯 정확도 94.3%</span>
+                <span class="stat-item" id="stat3">⭐ 만족도 4.9/5</span>
+            </div>
+        </div>
+        
+        <!-- 업로드 섹션 -->
+        <div class="upload-section" id="uploadSection">
+            <h2 id="uploadTitle">📸 얼굴 사진을 업로드하세요</h2>
+            <p id="uploadDesc">정면을 바라보는 자연광 셀카가 가장 정확한 분석이 가능해요!</p>
+            <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;" id="uploadHint">
+                🧴 클릭하거나 이미지를 드래그해서 업로드하세요
+            </p>
+            
+            <div class="file-input-wrapper">
+                <input type="file" id="imageUpload" class="file-input" accept="image/*,image/jpeg,image/jpg,image/png,image/gif,image/webp">
+                <label for="imageUpload" class="file-input-button" id="fileInputButton">
+                    ✨ 사진 선택하기
+                </label>
+            </div>
+            
+            <div class="preview-container" id="previewContainer" style="display: none;">
+                <img id="previewImage" class="preview-image" alt="미리보기">
+            </div>
+        </div>
+
+        <!-- 개인정보 입력 섹션 -->
+        <div class="input-section">
+            <h2 id="inputTitle">📋 기본 정보를 입력하세요</h2>
+            <p id="inputDesc">더 정확한 피부 나이 분석을 위한 필수 정보들이에요</p>
+            
+            <div class="form-grid">
+                <div class="form-group">
+                    <label class="form-label" id="genderLabel">성별</label>
+                    <select id="genderSelect" class="form-select">
+                        <option value="" id="genderPlaceholder">성별 선택</option>
+                        <option value="남성" id="genderMale">남성</option>
+                        <option value="여성" id="genderFemale">여성</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" id="ageLabel">실제 나이</label>
+                    <input type="number" id="ageInput" class="form-input" placeholder="나이를 입력하세요" min="15" max="80">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" id="skinTypeLabel">피부 타입</label>
+                    <select id="skinTypeSelect" class="form-select">
+                        <option value="" id="skinTypePlaceholder">피부 타입 선택</option>
+                        <option value="건성" id="skinTypeDry">건성</option>
+                        <option value="지성" id="skinTypeOily">지성</option>
+                        <option value="복합성" id="skinTypeCombination">복합성</option>
+                        <option value="민감성" id="skinTypeSensitive">민감성</option>
+                        <option value="정상" id="skinTypeNormal">정상</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" id="concernLabel">주요 고민</label>
+                    <select id="concernSelect" class="form-select">
+                        <option value="" id="concernPlaceholder">고민 선택</option>
+                        <option value="주름/탄력" id="concernWrinkles">주름/탄력</option>
+                        <option value="색소침착" id="concernPigmentation">색소침착/기미</option>
+                        <option value="모공/블랙헤드" id="concernPores">모공/블랙헤드</option>
+                        <option value="여드름/트러블" id="concernAcne">여드름/트러블</option>
+                        <option value="건조함" id="concernDryness">건조함</option>
+                        <option value="특별한 고민 없음" id="concernNone">특별한 고민 없음</option>
+                    </select>
+                </div>
+            </div>
+
+            <button onclick="analyzeSkinAge()" class="analyze-button" id="analyzeBtn" disabled>
+                🧴 피부 나이 분석하기
+            </button>
+        </div>
+        
+        <!-- 로딩 -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <h3 id="loadingTitle">🧴 AI가 당신의 피부를 분석하는 중...</h3>
+            <p id="loadingDesc">최신 AI 기술로 피부 상태와 나이를 정교하게 분석하고 있습니다</p>
+        </div>
+        
+        <!-- 결과 섹션 -->
+        <div class="result-section" id="resultSection">
+            <h2 id="resultTitle">✨ 피부 나이 분석 결과</h2>
+            
+            <div class="skin-result">
+                <div class="skin-age-display" id="skinAgeDisplay">25세</div>
+                <div class="skin-status" id="skinStatus">건강한 피부</div>
+                <div class="skin-description" id="skinDescription">당신의 피부는 실제 나이보다 젊어 보이는 건강한 상태입니다.</div>
+            </div>
+
+            <div class="skin-score" id="skinScore">
+                🌟 피부 건강도: 85점
+            </div>
+            
+            <div class="skincare-routine">
+                <h3 id="routineTitle">🧴 맞춤 스킨케어 루틴</h3>
+                <div id="routineDetails">
+                    <p><strong id="morningRoutine">🌅 아침 루틴:</strong> <span id="morningRoutineText">클렌징 → 토너 → 세럼 → 모이스처라이저 → 선크림</span></p>
+                    <p><strong id="eveningRoutine">🌙 저녁 루틴:</strong> <span id="eveningRoutineText">클렌징 → 토너 → 에센스 → 아이크림 → 나이트크림</span></p>
+                    <p><strong id="weeklyRoutine">📅 주간 케어:</strong> <span id="weeklyRoutineText">주 2회 딥클렌징 마스크, 주 1회 수분 마스크</span></p>
+                    <p><strong id="specialTips">💡 특별 관리법:</strong> <span id="specialTipsText">충분한 수분 공급과 자외선 차단이 핵심입니다</span></p>
+                </div>
+            </div>
+            
+            <div class="product-recommendations">
+                <h3 id="productTitle">🛍️ 추천 제품</h3>
+                <p id="productRecommendationText">당신의 피부 타입과 고민에 맞는 제품들을 추천해드립니다. 꾸준한 사용으로 더 건강한 피부를 만들어보세요!</p>
+            </div>
+            
+            <div class="routine-steps">
+                <h3 id="stepsTitle">🌟 세부 관리법</h3>
+                <div class="steps-grid" id="stepsGrid">
+                    <!-- JavaScript로 동적 생성 -->
+                </div>
+            </div>
+            
+            <div class="share-buttons">
+                <button class="share-button kakao korean-only" onclick="shareToKakao()">💛 카카오톡</button>
+                <button class="share-button twitter" onclick="shareToTwitter()" id="twitterBtn">🐦 Twitter</button>
+                <button class="share-button facebook" onclick="shareToFacebook()" id="facebookBtn">📘 Facebook</button>
+                <button class="share-button instagram" onclick="shareToInstagram()" id="instagramBtn">📷 Instagram</button>
+                <button class="share-button general" onclick="shareGeneral()" id="shareBtn">🔗 링크복사</button>
+            </div>
+
+            <div style="margin-top: 1rem;">
+                <button class="share-button general" onclick="retakeTest()" id="retakeBtn">🔄 다시 분석</button>
+                <button class="share-button general" onclick="saveResult()" id="saveBtn">💾 결과 저장</button>
+            </div>
+        </div>
+        
+        <!-- 연관 테스트 -->
+        <div class="related-tests">
+            <h2 id="relatedTitle">🌟 다른 뷰티 테스트</h2>
+            <div class="test-grid">
+                <a href="https://www.myauracolorcheck.site" class="test-card" target="_blank">
+                    <h3 id="relatedTest1">💄 오라 색상 테스트 </h3>
+                    <p id="relatedDesc1">당신만의 오라 색상을 찾아보세요</p>
+                </a>
+                <a href="#" class="test-card" target="_blank">
+                    <h3 id="relatedTest2">💅 네일 스타일 추천</h3>
+                    <p id="relatedDesc2">손톱 모양에 맞는 네일 디자인을 추천</p>
+                </a>
+                <a href="#" class="test-card" target="_blank">
+                    <h3 id="relatedTest3">✨ 메이크업 스타일 테스트</h3>
+                    <p id="relatedDesc3">얼굴형에 맞는 메이크업 스타일 분석</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- 푸터 -->
+        <div class="footer">
+            <h3 id="footerTitle">🧴 AI 피부 나이 테스트</h3>
+            <p id="footerSubtitle">과학적 분석으로 건강한 피부 만들기! 🌟</p>
+            <div style="margin-top: 1rem; color: #666; font-size: 0.9rem;">
+                <a href="contact.html" id="contactLink">문의하기</a> | 
+                <a href="privacy.html" id="privacyLink">개인정보처리방침</a> | 
+                <a href="terms.html" id="termsLink">이용약관</a>
+            </div>
+            <p style="margin-top: 1rem; color: #999; font-size: 0.8rem;" id="copyright">
+                © 2025 AI 피부 나이 테스트. All rights reserved.
+            </p>
+        </div>
+    </div>
+    
+    <!-- 플로팅 CTA -->
+    <div class="floating-cta" onclick="scrollToUpload()" id="floatingCta">
+        🧴 분석하기
+    </div>
+
+    <!-- 숨겨진 캔버스 (공유 이미지 생성용) -->
+    <canvas id="shareCanvas" width="600" height="800"></canvas>
+
+    <script>
+        // 다국어 번역 데이터
+        const translations = {
+            ko: {
+                pageTitle: '🧴 AI 피부 나이 테스트 | 스킨케어 관리법 추천',
+                pageDescription: 'AI가 분석하는 정확한 피부 나이 테스트! 피부 상태 분석과 맞춤형 스킨케어 루틴을 추천받아보세요',
+                ogTitle: '🧴 AI 피부 나이 테스트 - 스킨케어 관리법 추천',
+                ogDescription: 'AI가 분석하는 정확한 피부 나이 측정과 맞춤형 스킨케어 루틴 추천!',
+                mainTitle: '🧴 AI 피부 나이 테스트',
+                mainSubtitle: 'AI가 당신의 얼굴을 분석해 정확한 피부 나이와 맞춤형 스킨케어 루틴을 추천해드립니다!',
+                stat1: '📊 누적 분석 456,789명',
+                stat2: '🎯 정확도 94.3%',
+                stat3: '⭐ 만족도 4.9/5',
+                uploadTitle: '📸 얼굴 사진을 업로드하세요',
+                uploadDesc: '정면을 바라보는 자연광 셀카가 가장 정확한 분석이 가능해요!',
+                uploadHint: '🧴 클릭하거나 이미지를 드래그해서 업로드하세요',
+                fileInputButton: '✨ 사진 선택하기',
+                inputTitle: '📋 기본 정보를 입력하세요',
+                inputDesc: '더 정확한 피부 나이 분석을 위한 필수 정보들이에요',
+                genderLabel: '성별',
+                genderPlaceholder: '성별 선택',
+                genderMale: '남성',
+                genderFemale: '여성',
+                ageLabel: '실제 나이',
+                skinTypeLabel: '피부 타입',
+                skinTypePlaceholder: '피부 타입 선택',
+                skinTypeDry: '건성',
+                skinTypeOily: '지성',
+                skinTypeCombination: '복합성',
+                skinTypeSensitive: '민감성',
+                skinTypeNormal: '정상',
+                concernLabel: '주요 고민',
+                concernPlaceholder: '고민 선택',
+                concernWrinkles: '주름/탄력',
+                concernPigmentation: '색소침착/기미',
+                concernPores: '모공/블랙헤드',
+                concernAcne: '여드름/트러블',
+                concernDryness: '건조함',
+                concernNone: '특별한 고민 없음',
+                analyzeBtn: '🧴 피부 나이 분석하기',
+                loadingTitle: '🧴 AI가 당신의 피부를 분석하는 중...',
+                loadingDesc: '최신 AI 기술로 피부 상태와 나이를 정교하게 분석하고 있습니다',
+                resultTitle: '✨ 피부 나이 분석 결과',
+                routineTitle: '🧴 맞춤 스킨케어 루틴',
+                morningRoutine: '🌅 아침 루틴:',
+                eveningRoutine: '🌙 저녁 루틴:',
+                weeklyRoutine: '📅 주간 케어:',
+                specialTips: '💡 특별 관리법:',
+                productTitle: '🛍️ 추천 제품',
+                stepsTitle: '🌟 세부 관리법',
+                twitterBtn: '🐦 Twitter',
+                facebookBtn: '📘 Facebook',
+                instagramBtn: '📷 Instagram',
+                shareBtn: '🔗 링크복사',
+                retakeBtn: '🔄 다시 분석',
+                saveBtn: '💾 결과 저장',
+                relatedTitle: '🌟 다른 뷰티 테스트',
+                relatedTest1: '💄 퍼스널 컬러 진단',
+                relatedDesc1: '나에게 어울리는 색상을 찾아보세요',
+                relatedTest2: '💅 네일 스타일 추천',
+                relatedDesc2: '손톱 모양에 맞는 네일 디자인을 추천',
+                relatedTest3: '✨ 메이크업 스타일 테스트',
+                relatedDesc3: '얼굴형에 맞는 메이크업 스타일 분석',
+                footerTitle: '🧴 AI 피부 나이 테스트',
+                footerSubtitle: '과학적 분석으로 건강한 피부 만들기! 🌟',
+                contactLink: '문의하기',
+                privacyLink: '개인정보처리방침',
+                termsLink: '이용약관',
+                copyright: '© 2025 AI 피부 나이 테스트. All rights reserved.',
+                floatingCta: '🧴 분석하기'
+            },
+            en: {
+                pageTitle: '🧴 AI Skin Age Test | Skincare Routine Recommendations',
+                pageDescription: 'Accurate AI-powered skin age analysis! Get personalized skincare routines and product recommendations.',
+                ogTitle: '🧴 AI Skin Age Test - Skincare Routine Recommendations',
+                ogDescription: 'Get accurate skin age analysis and personalized skincare recommendations with AI technology!',
+                mainTitle: '🧴 AI Skin Age Test',
+                mainSubtitle: 'AI analyzes your face to determine your skin age and recommend personalized skincare routines!',
+                stat1: '📊 456,789 Analyses Complete',
+                stat2: '🎯 94.3% Accuracy',
+                stat3: '⭐ 4.9/5 Rating',
+                uploadTitle: '📸 Upload Your Photo',
+                uploadDesc: 'A front-facing selfie in natural light gives the most accurate analysis!',
+                uploadHint: '🧴 Click or drag an image here to upload',
+                fileInputButton: '✨ Choose Photo',
+                inputTitle: '📋 Enter Your Details',
+                inputDesc: 'Essential information for more accurate skin age analysis',
+                genderLabel: 'Gender',
+                genderPlaceholder: 'Select Gender',
+                genderMale: 'Male',
+                genderFemale: 'Female',
+                ageLabel: 'Actual Age',
+                skinTypeLabel: 'Skin Type',
+                skinTypePlaceholder: 'Select Skin Type',
+                skinTypeDry: 'Dry',
+                skinTypeOily: 'Oily',
+                skinTypeCombination: 'Combination',
+                skinTypeSensitive: 'Sensitive',
+                skinTypeNormal: 'Normal',
+                concernLabel: 'Main Concern',
+                concernPlaceholder: 'Select Concern',
+                concernWrinkles: 'Wrinkles/Elasticity',
+                concernPigmentation: 'Pigmentation/Dark Spots',
+                concernPores: 'Pores/Blackheads',
+                concernAcne: 'Acne/Breakouts',
+                concernDryness: 'Dryness',
+                concernNone: 'No Special Concerns',
+                analyzeBtn: '🧴 Analyze Skin Age',
+                loadingTitle: '🧴 AI is analyzing your skin...',
+                loadingDesc: 'Using advanced AI technology to precisely analyze your skin condition and age',
+                resultTitle: '✨ Skin Age Analysis Results',
+                routineTitle: '🧴 Personalized Skincare Routine',
+                morningRoutine: '🌅 Morning Routine:',
+                eveningRoutine: '🌙 Evening Routine:',
+                weeklyRoutine: '📅 Weekly Care:',
+                specialTips: '💡 Special Care Tips:',
+                productTitle: '🛍️ Product Recommendations',
+                stepsTitle: '🌟 Detailed Care Steps',
+                twitterBtn: '🐦 Twitter',
+                facebookBtn: '📘 Facebook',
+                instagramBtn: '📷 Instagram',
+                shareBtn: '🔗 Copy Link',
+                retakeBtn: '🔄 Analyze Again',
+                saveBtn: '💾 Save Result',
+                relatedTitle: '🌟 Other Beauty Tests',
+                relatedTest1: '💄 Personal Color Analysis',
+                relatedDesc1: 'Find colors that suit you best',
+                relatedTest2: '💅 Nail Style Recommendations',
+                relatedDesc2: 'Nail designs that match your nail shape',
+                relatedTest3: '✨ Makeup Style Test',
+                relatedDesc3: 'Makeup styles that suit your face shape',
+                footerTitle: '🧴 AI Skin Age Test',
+                footerSubtitle: 'Healthy skin through scientific analysis! 🌟',
+                contactLink: 'Contact Us',
+                privacyLink: 'Privacy Policy',
+                termsLink: 'Terms of Service',
+                copyright: '© 2025 AI Skin Age Test. All rights reserved.',
+                floatingCta: '🧴 Try Now'
+            }
+        };
+
+        // 현재 언어 상태 (기본값: 한국어)
+        let currentLanguage = 'ko';
+
+        // 피부 나이 분석 데이터
+        const skinAgeData = {
+            ko: [
+                {
+                    skinAge: 16,
+                    status: "완벽한 청소년 피부",
+                    description: "정말 놀라워요! 당신의 피부는 청소년기의 매끄럽고 완벽한 상태입니다. 천연 보습막과 탄력이 최고조에 달해있어요!",
+                    routine: {
+                        morning: "미지근한 물 세안 → 순한 토너 → 가벼운 젤 타입 보습제 → SPF30+ 선크림",
+                        evening: "순한 폼클렌저 → 토너 → 보습제",
+                        weekly: "주 1회 순한 각질제거, 주 1회 수분 마스크",
+                        tips: "과도한 관리는 금물! 기본에 충실하고 자외선 차단에만 집중하세요"
+                    },
+                    products: "청소년 전용 순한 제품을 사용하세요. 향이 강하거나 알코올 성분이 있는 제품은 피해주세요.",
+                    steps: [
+                        {emoji: "🧼", title: "순한 세안", text: "거품 적게, 부드럽게 세안"},
+                        {emoji: "☀️", title: "자외선 차단", text: "외출 시 SPF30+ 필수"},
+                        {emoji: "💧", title: "적절한 보습", text: "무거운 크림보다 젤 타입"},
+                        {emoji: "🚫", title: "과도한 관리 금지", text: "너무 많은 제품 사용 피하기"}
+                    ],
+                    healthScore: 100
+                },
+                {
+                    skinAge: 18,
+                    status: "완벽한 베이비 스킨",
+                    description: "놀라워요! 당신의 피부는 10대 후반의 매끄럽고 탄력 있는 상태입니다. 현재의 관리법을 유지하세요!",
+                    routine: {
+                        morning: "순한 클렌징 → 토너 → 가벼운 모이스처라이저 → SPF50+ 선크림",
+                        evening: "더블 클렌징 → 토너 → 세럼 → 모이스처라이저",
+                        weekly: "주 1회 순한 필링, 주 2회 수분 마스크",
+                        tips: "현재 상태 유지가 핵심! 자외선 차단과 충분한 수분 공급에 집중하세요"
+                    },
+                    products: "순한 성분의 기초 제품과 강력한 자외선 차단제를 사용하세요. 비타민C 세럼으로 예방 관리를 시작해보세요.",
+                    steps: [
+                        {emoji: "☀️", title: "자외선 차단", text: "매일 SPF50+ 선크림 필수"},
+                        {emoji: "💧", title: "수분 공급", text: "하루 8잔 이상 물 마시기"},
+                        {emoji: "😴", title: "충분한 수면", text: "7-8시간 양질의 수면"},
+                        {emoji: "🥗", title: "균형 잡힌 식단", text: "비타민 C, E가 풍부한 음식"}
+                    ],
+                    healthScore: 98
+                },
+                {
+                    skinAge: 20,
+                    status: "빛나는 20대 피부",
+                    description: "20세의 빛나는 피부! 자연스러운 윤기와 탄력이 살아있는 최고의 컨디션입니다. 이 상태를 오래 유지해보세요.",
+                    routine: {
+                        morning: "젤 클렌저 → 수분 토너 → 비타민C 세럼 → 모이스처라이저 → 선크림",
+                        evening: "오일 클렌징 → 폼 클렌징 → 토너 → 나이아신아마이드 세럼 → 나이트크림",
+                        weekly: "주 1회 순한 필링, 주 2회 보습 마스크",
+                        tips: "예방이 최고의 관리! 항산화 성분으로 노화를 미리 예방하세요"
+                    },
+                    products: "비타민C, 나이아신아마이드 같은 항산화 성분을 추천합니다. 아직은 순한 제품으로도 충분해요.",
+                    steps: [
+                        {emoji: "🍊", title: "비타민C", text: "아침에 가벼운 비타민C 세럼"},
+                        {emoji: "💦", title: "충분한 보습", text: "수분 공급에 집중"},
+                        {emoji: "🌙", title: "밤 관리", text: "저녁에 영양 공급"},
+                        {emoji: "🧴", title: "기본에 충실", text: "클렌징-토너-보습-자차"}
+                    ],
+                    healthScore: 96
+                },
+                {
+                    skinAge: 22,
+                    status: "건강한 젊은 피부",
+                    description: "매우 건강한 상태의 피부입니다! 탄력과 윤기가 살아있어 20대 초반의 아름다운 피부를 유지하고 있어요.",
+                    routine: {
+                        morning: "젤 클렌저 → 비타민C 토너 → 나이아신아마이드 세럼 → 모이스처라이저 → 선크림",
+                        evening: "오일 클렌징 → 폼 클렌징 → 토너 → 레티놀 세럼(주 2회) → 나이트크림",
+                        weekly: "주 1회 AHA/BHA 필링, 주 2회 수분/진정 마스크",
+                        tips: "예방 관리 시작 시기! 항산화 성분과 순한 각질 관리로 피부 턴오버를 도와주세요"
+                    },
+                    products: "비타민C, 나이아신아마이드, 순한 레티놀 제품을 추천합니다. 수분 크림과 선크림은 필수예요.",
+                    steps: [
+                        {emoji: "🍊", title: "비타민C", text: "아침에 항산화 세럼 사용"},
+                        {emoji: "🌙", title: "레티놀", text: "저녁에 주 2회 순한 레티놀"},
+                        {emoji: "💦", title: "딥클렌징", text: "주 2회 모공 깊숙이 클렌징"},
+                        {emoji: "🧴", title: "토너", text: "pH 밸런스 맞추는 토너 사용"}
+                    ],
+                    healthScore: 94
+                },
+                {
+                    skinAge: 24,
+                    status: "안정적인 건강 피부",
+                    description: "20대 중반의 안정적인 피부 상태입니다. 아직 젊지만 이제 체계적인 관리를 시작할 시기예요.",
+                    routine: {
+                        morning: "약산성 클렌저 → 비타민C 토너 → 나이아신아마이드 → 히알루론산 세럼 → 선크림",
+                        evening: "더블 클렌징 → 수분 토너 → 펩타이드 세럼 → 모이스처라이저",
+                        weekly: "주 2회 순한 각질 관리, 주 1회 수분 마스크",
+                        tips: "체계적인 관리의 시작! 성분을 하나씩 천천히 도입해보세요"
+                    },
+                    products: "히알루론산, 펩타이드 성분을 추천합니다. 아이크림 사용도 고려해보세요.",
+                    steps: [
+                        {emoji: "💧", title: "히알루론산", text: "강력한 수분 공급 성분"},
+                        {emoji: "🔬", title: "펩타이드", text: "콜라겐 생성 도움"},
+                        {emoji: "👁️", title: "아이케어 고려", text: "눈가 관리 시작 고려"},
+                        {emoji: "📋", title: "루틴 정착", text: "일정한 루틴 만들기"}
+                    ],
+                    healthScore: 92
+                },
+                {
+                    skinAge: 26,
+                    status: "균형 잡힌 건강 피부",
+                    description: "20대 후반의 안정적이고 건강한 피부 상태입니다. 적절한 관리로 현재 상태를 오래 유지할 수 있어요.",
+                    routine: {
+                        morning: "약산성 클렌저 → 비타민C 토너 → 나이아신아마이드 → 히알루론산 → 선크림",
+                        evening: "더블 클렌징 → PHA 토너 → 펩타이드 세럼 → 아이크림 → 나이트크림",
+                        weekly: "주 2회 각질 관리, 주 1회 수분 마스크, 주 1회 영양 마스크",
+                        tips: "안티에이징 관리의 골든타임! 꾸준한 보습과 영양 공급으로 피부 방어막을 강화하세요"
+                    },
+                    products: "펩타이드, 히알루론산, 세라마이드 성분의 제품을 추천합니다. 아이크림 사용을 시작하세요.",
+                    steps: [
+                        {emoji: "👁️", title: "아이케어", text: "아이크림으로 눈가 관리 시작"},
+                        {emoji: "🔬", title: "펩타이드", text: "콜라겐 생성을 돕는 펩타이드"},
+                        {emoji: "💧", title: "히알루론산", text: "강력한 수분 공급 성분"},
+                        {emoji: "🛡️", title: "세라마이드", text: "피부 장벽 강화 성분"}
+                    ],
+                    healthScore: 90
+                },
+                {
+                    skinAge: 28,
+                    status: "주의 깊은 관리 필요 피부",
+                    description: "20대 후반의 피부로 첫 노화 신호가 나타날 수 있는 시기입니다. 지금부터 적극적인 관리가 필요해요.",
+                    routine: {
+                        morning: "젠틀 클렌저 → 비타민C 세럼 → 나이아신아마이드 → 수분크림 → SPF50+ 선크림",
+                        evening: "오일→폼 더블클렌징 → 레티놀 세럼(격일) → 펩타이드 크림 → 아이크림",
+                        weekly: "주 2회 글리콜릭산 패드, 주 1회 딥 모이스처 마스크",
+                        tips: "본격적인 안티에이징 케어 시작! 레티놀과 펩타이드로 콜라겐 생성을 촉진하세요"
+                    },
+                    products: "레티놀, 펩타이드, 아데노신 성분 제품을 추천합니다. 목과 데콜테까지 함께 관리하세요.",
+                    steps: [
+                        {emoji: "🔄", title: "레티놀", text: "격일로 레티놀 사용하여 적응"},
+                        {emoji: "💪", title: "펩타이드", text: "탄력 개선을 위한 펩타이드"},
+                        {emoji: "🎯", title: "집중케어", text: "목, 데콜테까지 관리 영역 확대"},
+                        {emoji: "⚡", title: "부스터", text: "흡수율 높이는 부스터 사용"}
+                    ],
+                    healthScore: 88
+                },
+                {
+                    skinAge: 30,
+                    status: "전환기 관리 피부",
+                    description: "30세의 피부로 본격적인 안티에이징 케어가 필요한 시기입니다. 예방에서 치료로 관리 방향을 전환하세요.",
+                    routine: {
+                        morning: "젠틀 클렌저 → 비타민C 15% → 나이아신아마이드 → 수분크림 → SPF50+ 선크림",
+                        evening: "오일→폼 더블클렌징 → 레티놀 0.25% → 펩타이드 크림 → 아이크림",
+                        weekly: "주 2회 글리콜릭산, 주 1회 딥 모이스처 마스크, 주 1회 영양 마스크",
+                        tips: "30대 진입! 레티놀 농도를 점차 높이고 전문 관리도 고려해보세요"
+                    },
+                    products: "레티놀, 펩타이드, 아데노신 성분 제품을 추천합니다. 목과 데콜테까지 함께 관리하세요.",
+                    steps: [
+                        {emoji: "🔄", title: "레티놀 업그레이드", text: "레티놀 농도 서서히 증가"},
+                        {emoji: "💪", title: "펩타이드", text: "탄력 개선을 위한 펩타이드"},
+                        {emoji: "🎯", title: "집중케어", text: "목, 데콜테까지 관리 영역 확대"},
+                        {emoji: "📅", title: "정기 관리", text: "월 1회 전문 케어 고려"}
+                    ],
+                    healthScore: 85
+                },
+                {
+                    skinAge: 32,
+                    status: "적극 관리 필요 피부",
+                    description: "30대 초반의 피부로 탄력 감소와 잔주름이 시작되는 시기입니다. 체계적인 안티에이징 관리가 필요해요.",
+                    routine: {
+                        morning: "딥클렌징 → 비타민C 20% → 히알루론산 → 펩타이드 크림 → 강력한 선크림",
+                        evening: "더블클렌징 → 레티놀 0.5% → 나이아신아마이드 → 아이크림 → 나이트크림",
+                        weekly: "주 3회 각질관리, 주 2회 영양마스크, 월 1회 딥케어 마스크",
+                        tips: "고농도 활성 성분 사용 시기! 레티놀 농도를 점차 높이고 전문 케어를 병행하세요"
+                    },
+                    products: "고농도 레티놀, 비타민C, 아데노신 제품을 추천합니다. 전문 시술과 병행하면 더욱 효과적이에요.",
+                    steps: [
+                        {emoji: "🎯", title: "고농도 세럼", text: "효과적인 고농도 활성 성분"},
+                        {emoji: "💆", title: "마사지", text: "혈액순환 돕는 페이셜 마사지"},
+                        {emoji: "🏥", title: "전문케어", text: "피부과 케어 월 1회 추천"},
+                        {emoji: "🌙", title: "야간집중", text: "밤에 집중 영양 공급"}
+                    ],
+                    healthScore: 82
+                },
+                {
+                    skinAge: 34,
+                    status: "안티에이징 집중 피부",
+                    description: "30대 중반에 접어들며 주름과 탄력 감소가 시작되는 중요한 시기입니다. 적극적인 안티에이징이 필요해요.",
+                    routine: {
+                        morning: "효소 클렌저 → 비타민C 25% → 펩타이드 세럼 → 콜라겐 크림 → SPF50+ 선크림",
+                        evening: "더블클렌징 → 레티놀 0.75% → 아데노신 세럼 → 아이크림 → 리치 나이트크림",
+                        weekly: "주 3회 각질관리, 주 2회 콜라겐 마스크, 주 1회 영양 마스크",
+                        tips: "콜라겐 생성 촉진이 핵심! 펩타이드와 콜라겐 부스터로 탄력 관리를 시작하세요"
+                    },
+                    products: "펩타이드, 콜라겐, 아데노신 고농도 제품을 추천합니다. 목과 데콜테 케어도 시작하세요.",
+                    steps: [
+                        {emoji: "🔬", title: "펩타이드", text: "콜라겐 생성 촉진 성분"},
+                        {emoji: "💪", title: "탄력 관리", text: "탄력 개선에 집중"},
+                        {emoji: "🎯", title: "목 케어", text: "목과 데콜테까지 확장"},
+                        {emoji: "⚡", title: "부스터", text: "흡수율 높이는 부스터"}
+                    ],
+                    healthScore: 78
+                },
+                {
+                    skinAge: 36,
+                    status: "집중 관리 피부",
+                    description: "30대 중후반으로 주름과 탄력 감소가 뚜렷해지는 시기입니다. 집중적인 안티에이징 케어가 필요합니다.",
+                    routine: {
+                        morning: "효소세안 → 고농도 비타민C → 펩타이드 부스터 → 콜라겐 크림 → SPF50+ 선크림",
+                        evening: "더블클렌징 → 레티놀 1% → 아데노신 세럼 → 목주름크림 → 리치 나이트크림",
+                        weekly: "주 3회 글리콜릭산, 주 2회 콜라겐 마스크, 주 1회 LED 케어",
+                        tips: "전문 시술과 홈케어 병행 필수! 콜라겐 부스팅과 주름 개선에 집중하세요"
+                    },
+                    products: "콜라겐, 엘라스틴, 아데노신 고농도 제품을 추천합니다. 목과 데콜테 전용 제품도 필요해요.",
+                    steps: [
+                        {emoji: "🔬", title: "콜라겐", text: "콜라겐 생성 촉진 성분 집중"},
+                        {emoji: "💡", title: "LED케어", text: "집에서 LED 마스크 사용"},
+                        {emoji: "🎭", title: "마스크팩", text: "고영양 마스크 정기 사용"},
+                        {emoji: "🏥", title: "시술", text: "리프팅 시술 고려 시기"}
+                    ],
+                    healthScore: 75
+                },
+                {
+                    skinAge: 38,
+                    status: "전문 케어 필요 피부",
+                    description: "30대 후반으로 깊은 주름과 색소침착이 나타나는 시기입니다. 전문적인 케어와 체계적인 관리가 필요해요.",
+                    routine: {
+                        morning: "딥클렌징 → 트레티노인 대체제 → 니아신아마이드 10% → 콜라겐 크림 → 강력 선크림",
+                        evening: "클렌징오일→폼 → 고농도 레티놀 → 펩타이드 세럼 → 아이크림 → 영양크림",
+                        weekly: "주 4회 각질관리, 주 3회 영양마스크, 월 2회 전문케어",
+                        tips: "피부과 시술과 홈케어의 완벽한 조합! 레이저, 필링 등 전문 시술을 정기적으로 받으세요"
+                    },
+                    products: "트레티노인, 고농도 펩타이드, 성장인자 제품을 추천합니다. 전문 브랜드 제품 사용을 권해요.",
+                    steps: [
+                        {emoji: "💊", title: "처방제품", text: "피부과 처방 제품 사용"},
+                        {emoji: "⚡", title: "고주파", text: "리프팅 고주파 시술"},
+                        {emoji: "💉", title: "보톡스", text: "보톡스로 주름 관리"},
+                        {emoji: "🔬", title: "성장인자", text: "성장인자 성분 제품 사용"}
+                    ],
+                    healthScore: 70
+                },
+                {
+                    skinAge: 40,
+                    status: "안티에이징 전문 피부",
+                    description: "40세에 접어들며 본격적인 노화가 시작되는 시기입니다. 강력한 안티에이징 케어가 필요해요.",
+                    routine: {
+                        morning: "효소세안 → 비타민C 30% → 성장인자 세럼 → 리프팅크림 → 프리미엄 선크림",
+                        evening: "더블클렌징 → 트레티노인 → 펩타이드 복합체 → 스템셀크림 → 목주름케어",
+                        weekly: "매일 각질관리, 주 4회 마스크, 월 2-3회 피부과 시술",
+                        tips: "공격적인 안티에이징 필수! 줄기세포, 성장인자 등 첨단 성분과 레이저 시술을 병행하세요"
+                    },
+                    products: "스템셀, 성장인자, 고농도 펩타이드 제품을 추천합니다. 의료용 화장품 라인 사용을 고려하세요.",
+                    steps: [
+                        {emoji: "🧬", title: "줄기세포", text: "줄기세포 성분으로 재생력 향상"},
+                        {emoji: "💎", title: "프리미엄케어", text: "고급 성분 집중 투입"},
+                        {emoji: "🔥", title: "레이저", text: "프락셀, 울쎄라 등 레이저 시술"},
+                        {emoji: "💆", title: "전문마사지", text: "림프 드레나지 마사지"}
+                    ],
+                    healthScore: 65
+                },
+                {
+                    skinAge: 42,
+                    status: "집중 재생 케어 피부",
+                    description: "40대 초중반으로 피부 재생력이 떨어지기 시작하는 시기입니다. 강력한 재생 케어가 필요해요.",
+                    routine: {
+                        morning: "딥클렌징 → 고농도 비타민C → 성장인자 → 콜라겐 부스터 → 안티에이징 선크림",
+                        evening: "트리플클렌징 → 레티노이드 → 펩타이드 콤플렉스 → 재생크림 → 넥케어",
+                        weekly: "매일 홈필링, 주 5회 마스크, 월 3-4회 피부과 관리",
+                        tips: "재생력 극대화가 핵심! 줄기세포 치료, 실 리프팅 등 적극적인 시술을 고려하세요"
+                    },
+                    products: "의료용 재생 크림, 고농도 성장인자, 콜라겐 부스터를 추천합니다. 전문의와 상담 후 제품을 선택하세요.",
+                    steps: [
+                        {emoji: "🔄", title: "재생력", text: "피부 재생 촉진 집중 케어"},
+                        {emoji: "🧵", title: "실리프팅", text: "PDO 실 리프팅 시술"},
+                        {emoji: "💉", title: "필러", text: "볼륨 보충을 위한 필러"},
+                        {emoji: "⚕️", title: "의료케어", text: "정기적인 피부과 관리"}
+                    ],
+                    healthScore: 60
+                },
+                {
+                    skinAge: 45,
+                    status: "종합 안티에이징 피부",
+                    description: "40대 중반으로 호르몬 변화와 노화가 가속화되는 시기입니다. 종합적인 안티에이징 전략이 필요해요.",
+                    routine: {
+                        morning: "젠틀클렌징 → 펩타이드 토너 → 성장인자 세럼 → 리프팅크림 → 강력 자외선차단",
+                        evening: "오일클렌징 → 레티노이드 → 콜라겐 부스터 → 호르몬크림 → 집중영양크림",
+                        weekly: "매일 재생케어, 주 6회 마스크, 월 4회 이상 전문케어",
+                        tips: "호르몬 케어까지 고려해야 하는 시기! 에스트로겐 케어와 함께 종합적인 관리가 필요합니다"
+                    },
+                    products: "호르몬 밸런스 케어 제품, 고농도 재생 크림, 의료용 화장품을 추천합니다. 전문의 상담이 필수예요.",
+                    steps: [
+                        {emoji: "⚖️", title: "호르몬케어", text: "호르몬 밸런스 고려한 케어"},
+                        {emoji: "💎", title: "럭셔리케어", text: "최고급 성분 집중 사용"},
+                        {emoji: "🏥", title: "정기시술", text: "월 4회 이상 전문 관리"},
+                        {emoji: "🧬", title: "맞춤치료", text: "개인별 맞춤 치료 프로그램"}
+                    ],
+                    healthScore: 55
+                },
+                {
+                    skinAge: 48,
+                    status: "갱년기 집중 관리 피부",
+                    description: "40대 후반으로 갱년기 시작과 함께 급격한 피부 변화가 나타나는 시기입니다. 호르몬 케어가 필수예요.",
+                    routine: {
+                        morning: "젠틀클렌징 → 호르몬 토너 → 성장인자 세럼 → 이소플라본 크림 → 강력 자외선차단",
+                        evening: "오일클렌징 → 레티노이드 → 에스트로겐 세럼 → 집중영양크림 → 넥케어",
+                        weekly: "매일 재생케어, 주 6회 마스크, 월 4-5회 전문케어",
+                        tips: "갱년기 호르몬 변화에 대응! 이소플라본, 에스트로겐 케어 제품과 전문 시술을 병행하세요"
+                    },
+                    products: "갱년기 전용 제품, 이소플라본, 에스트로겐 성분 제품을 추천합니다. 산부인과 상담도 고려하세요.",
+                    steps: [
+                        {emoji: "♀️", title: "호르몬 케어", text: "갱년기 호르몬 변화 대응"},
+                        {emoji: "🌿", title: "이소플라본", text: "식물성 에스트로겐 보충"},
+                        {emoji: "💉", title: "호르몬 시술", text: "호르몬 대체 요법 고려"},
+                        {emoji: "🏥", title: "전문 관리", text: "산부인과-피부과 연계 치료"}
+                    ],
+                    healthScore: 50
+                },
+                {
+                    skinAge: 50,
+                    status: "성숙 피부 전문 관리",
+                    description: "50세의 성숙한 피부로 본격적인 갱년기와 함께 전문적인 관리가 필요한 시기입니다.",
+                    routine: {
+                        morning: "젠틀클렌징 → 펩타이드 토너 → 성장인자 세럼 → 리프팅크림 → 강력 자외선차단",
+                        evening: "오일클렌징 → 레티노이드 → 콜라겐 부스터 → 호르몬크림 → 집중영양크림",
+                        weekly: "매일 재생케어, 주 6회 마스크, 월 5회 이상 전문케어",
+                        tips: "성숙 피부의 전문 관리! 호르몬 대체 요법과 함께 최고급 안티에이징 케어가 필요합니다"
+                    },
+                    products: "의료용 최고급 제품, 호르몬 밸런스 케어 제품, 고농도 재생 크림을 추천합니다.",
+                    steps: [
+                        {emoji: "👑", title: "프리미엄 케어", text: "최고급 성분 집중 투입"},
+                        {emoji: "⚖️", title: "호르몬 밸런스", text: "전문의 상담한 호르몬 케어"},
+                        {emoji: "🏥", title: "정기 시술", text: "월 5회 이상 전문 관리"},
+                        {emoji: "🧬", title: "맞춤 치료", text: "개인별 맞춤 프로그램"}
+                    ],
+                    healthScore: 45
+                },
+                {
+                    skinAge: 52,
+                    status: "갱년기 후 관리 피부",
+                    description: "50대 초중반으로 갱년기 이후 피부 변화에 적응하는 시기입니다. 새로운 관리법이 필요해요.",
+                    routine: {
+                        morning: "초순한클렌징 → 세라마이드 토너 → 성장인자 세럼 → 리프팅크림 → 안티에이징 선크림",
+                        evening: "오일클렌징 → 순한 레티놀 → 콜라겐 부스터 → 집중영양크림 → 넥케어",
+                        weekly: "매일 재생케어, 격일 마스크, 월 5-6회 전문케어",
+                        tips: "갱년기 후 피부 적응기! 자극을 줄이고 재생과 영양 공급에 집중하세요"
+                    },
+                    products: "순한 성분의 고영양 제품, 세라마이드, 콜라겐 제품을 추천합니다. 민감해진 피부를 고려하세요.",
+                    steps: [
+                        {emoji: "🌸", title: "순한 케어", text: "민감해진 피부를 위한 순한 성분"},
+                        {emoji: "🛡️", title: "장벽 강화", text: "세라마이드로 피부 장벽 복구"},
+                        {emoji: "💧", title: "집중 보습", text: "수분 공급 더욱 중요"},
+                        {emoji: "⚕️", title: "정기 검진", text: "피부과 정기 검진 필수"}
+                    ],
+                    healthScore: 42
+                },
+                {
+                    skinAge: 55,
+                    status: "성숙 피부 유지 관리",
+                    description: "50대 중반으로 현재 상태 유지와 악화 방지에 중점을 둔 관리가 필요한 시기입니다.",
+                    routine: {
+                        morning: "크림클렌저 → 영양 토너 → 멀티 펩타이드 세럼 → 리프팅크림 → 고보습 선크림",
+                        evening: "오일클렌징 → 순한 세안 → 콜라겐 부스터 → 고영양크림 → 넥케어",
+                        weekly: "매일 영양케어, 격일 마스크, 월 6회 전문케어",
+                        tips: "현상 유지가 목표! 자극 최소화하고 영양과 보습을 극대화하세요"
+                    },
+                    products: "고영양 크림, 멀티 펩타이드, 콜라겐 제품을 추천합니다. 순한 성분 위주로 선택하세요.",
+                    steps: [
+                        {emoji: "🥇", title: "영양 집중", text: "고영양 성분 집중 공급"},
+                        {emoji: "💎", title: "프리미엄 제품", text: "최고급 브랜드 제품 사용"},
+                        {emoji: "🏥", title: "정기 관리", text: "월 6회 전문 피부 관리"},
+                        {emoji: "❤️", title: "셀프케어", text: "스트레스 관리도 중요"}
+                    ],
+                    healthScore: 40
+                },
+                {
+                    skinAge: 58,
+                    status: "지혜로운 피부 관리",
+                    description: "50대 후반으로 지혜로운 피부 관리가 필요한 시기입니다. 무리하지 않는 관리가 중요해요.",
+                    routine: {
+                        morning: "크림클렌저 → 영양 토너 → 재생 세럼 → 고보습크림 → 고보습 선크림",
+                        evening: "크림클렌서 → 영양 토너 → 재생크림 → 고영양크림",
+                        weekly: "매일 영양케어, 주 3회 마스크, 월 4-6회 전문케어",
+                        tips: "지혜로운 관리! 과도한 자극보다는 부드럽고 영양가 있는 케어에 집중하세요"
+                    },
+                    products: "재생 크림, 고보습 제품, 영양 마스크를 추천합니다. 텍스처가 부드러운 제품을 선택하세요.",
+                    steps: [
+                        {emoji: "🌅", title: "재생 관리", text: "피부 재생 도움 성분"},
+                        {emoji: "🌊", title: "깊은 보습", text: "수분 손실 최소화"},
+                        {emoji: "🎯", title: "포인트 케어", text: "문제 부위 집중 관리"},
+                        {emoji: "😌", title: "편안한 케어", text: "무리하지 않는 관리"}
+                    ],
+                    healthScore: 38
+                },
+                {
+                    skinAge: 60,
+                    status: "인생 경험이 묻어나는 피부",
+                    description: "60세의 아름다운 성숙 피부입니다. 인생의 지혜가 묻어나는 피부를 잘 관리해보세요.",
+                    routine: {
+                        morning: "밀크클렌저 → 영양 토너 → 재생 세럼 → 고보습크림 → 보습 선크림",
+                        evening: "밀크클렌서 → 영양 토너 → 재생크림 → 영양크림",
+                        weekly: "매일 보습케어, 주 2-3회 마스크, 월 4회 전문케어",
+                        tips: "성숙한 아름다움! 자연스러운 노화를 받아들이며 편안하고 지속가능한 관리를 하세요"
+                    },
+                    products: "순한 클렌저, 고보습 크림, 영양 마스크를 추천합니다. 자극 없는 제품을 우선으로 하세요.",
+                    steps: [
+                        {emoji: "💖", title: "자연스러움", text: "자연스러운 아름다움 추구"},
+                        {emoji: "🌸", title: "순한 관리", text: "자극 없는 순한 제품"},
+                        {emoji: "💧", title: "보습 우선", text: "보습이 가장 중요"},
+                        {emoji: "✨", title: "내면의 빛", text: "내면의 아름다움이 우선"}
+                    ],
+                    healthScore: 35
+                },
+                {
+                    skinAge: 65,
+                    status: "품격 있는 성숙 피부",
+                    description: "65세의 품격 있는 성숙 피부입니다. 오랜 세월의 지혜와 경험이 묻어나는 아름다운 피부예요.",
+                    routine: {
+                        morning: "밀크클렌저 → 영양 토너 → 보습 세럼 → 영양크림 → 순한 선크림",
+                        evening: "밀크클렌서 → 영양 토너 → 영양크림",
+                        weekly: "매일 보습케어, 주 2회 마스크, 월 2-4회 전문케어",
+                        tips: "품격 있는 아름다움! 편안하고 지속가능한 관리로 건강한 피부를 유지하세요"
+                    },
+                    products: "극순한 제품, 고보습 크림, 영양 오일을 추천합니다. 피부에 무리가 가지 않는 제품을 선택하세요.",
+                    steps: [
+                        {emoji: "👑", title: "품격", text: "오랜 세월의 품격과 지혜"},
+                        {emoji: "🕊️", title: "평화로운 케어", text: "스트레스 없는 관리"},
+                        {emoji: "💝", title: "셀프 러브", text: "자신을 사랑하는 마음"},
+                        {emoji: "🌟", title: "내적 아름다움", text: "내면에서 나오는 빛"}
+                    ],
+                    healthScore: 32
+                }
+            ],
+            en: [
+                {
+                    skinAge: 16,
+                    status: "Perfect Teen Skin",
+                    description: "Amazing! Your skin has the perfect smooth condition of adolescence. Natural moisture barrier and elasticity are at their peak!",
+                    routine: {
+                        morning: "Lukewarm water cleanse → Gentle toner → Light gel moisturizer → SPF30+ sunscreen",
+                        evening: "Gentle foam cleanser → Toner → Moisturizer",
+                        weekly: "Weekly gentle exfoliation, weekly hydrating mask",
+                        tips: "Less is more! Focus on basics and sun protection only"
+                    },
+                    products: "Use teen-specific gentle products. Avoid products with strong fragrances or alcohol.",
+                    steps: [
+                        {emoji: "🧼", title: "Gentle Cleansing", text: "Minimal foam, gentle cleansing"},
+                        {emoji: "☀️", title: "Sun Protection", text: "SPF30+ essential when outdoors"},
+                        {emoji: "💧", title: "Proper Moisture", text: "Gel types over heavy creams"},
+                        {emoji: "🚫", title: "No Over-care", text: "Avoid too many products"}
+                    ],
+                    healthScore: 100
+                },
+                {
+                    skinAge: 18,
+                    status: "Perfect Baby Skin",
+                    description: "Amazing! Your skin has the smooth and elastic condition of a teenager. Keep your current care routine!",
+                    routine: {
+                        morning: "Gentle cleanser → Toner → Light moisturizer → SPF50+ sunscreen",
+                        evening: "Double cleansing → Toner → Serum → Moisturizer",
+                        weekly: "Weekly gentle peeling, twice weekly hydrating masks",
+                        tips: "Maintaining current condition is key! Focus on sun protection and adequate hydration"
+                    },
+                    products: "Use gentle ingredient products and strong sunscreen. Start preventive care with Vitamin C serum.",
+                    steps: [
+                        {emoji: "☀️", title: "Sun Protection", text: "Daily SPF50+ sunscreen essential"},
+                        {emoji: "💧", title: "Hydration", text: "Drink 8+ glasses of water daily"},
+                        {emoji: "😴", title: "Sleep", text: "7-8 hours of quality sleep"},
+                        {emoji: "🥗", title: "Diet", text: "Foods rich in vitamins C and E"}
+                    ],
+                    healthScore: 98
+                },
+                {
+                    skinAge: 20,
+                    status: "Glowing 20s Skin",
+                    description: "Glowing 20-year-old skin! Natural radiance and elasticity are at their best condition. Try to maintain this state for long.",
+                    routine: {
+                        morning: "Gel cleanser → Hydrating toner → Vitamin C serum → Moisturizer → Sunscreen",
+                        evening: "Oil cleansing → Foam cleansing → Toner → Niacinamide serum → Night cream",
+                        weekly: "Weekly gentle peeling, twice weekly moisturizing masks",
+                        tips: "Prevention is the best care! Prevent aging in advance with antioxidant ingredients"
+                    },
+                    products: "Recommend antioxidant ingredients like Vitamin C and niacinamide. Gentle products are still sufficient.",
+                    steps: [
+                        {emoji: "🍊", title: "Vitamin C", text: "Light vitamin C serum in morning"},
+                        {emoji: "💦", title: "Adequate Moisture", text: "Focus on hydration"},
+                        {emoji: "🌙", title: "Night Care", text: "Evening nutrition supply"},
+                        {emoji: "🧴", title: "Stick to Basics", text: "Cleanse-tone-moisturize-protect"}
+                    ],
+                    healthScore: 96
+                },
+                {
+                    skinAge: 22,
+                    status: "Healthy Young Skin",
+                    description: "Very healthy skin condition! Elasticity and radiance are alive, maintaining beautiful early 20s skin.",
+                    routine: {
+                        morning: "Gel cleanser → Vitamin C toner → Niacinamide serum → Moisturizer → Sunscreen",
+                        evening: "Oil cleansing → Foam cleansing → Toner → Retinol serum (2x/week) → Night cream",
+                        weekly: "Weekly AHA/BHA peeling, twice weekly hydrating/soothing masks",
+                        tips: "Time to start preventive care! Help skin turnover with antioxidants and gentle exfoliation"
+                    },
+                    products: "Recommend Vitamin C, niacinamide, gentle retinol products. Moisturizer and sunscreen are essential.",
+                    steps: [
+                        {emoji: "🍊", title: "Vitamin C", text: "Morning antioxidant serum"},
+                        {emoji: "🌙", title: "Retinol", text: "Evening gentle retinol 2x/week"},
+                        {emoji: "💦", title: "Deep Cleansing", text: "Deep pore cleansing 2x/week"},
+                        {emoji: "🧴", title: "Toner", text: "pH balancing toner"}
+                    ],
+                    healthScore: 92
+                },
+                {
+                    skinAge: 25,
+                    status: "Balanced Healthy Skin",
+                    description: "Stable and healthy mid-20s skin condition. Proper care can maintain this state for a long time.",
+                    routine: {
+                        morning: "Mild acidic cleanser → Vitamin C toner → Niacinamide → Hyaluronic acid → Sunscreen",
+                        evening: "Double cleansing → PHA toner → Peptide serum → Eye cream → Night cream",
+                        weekly: "Twice weekly exfoliation, weekly hydrating mask, weekly nutrition mask",
+                        tips: "Golden time for anti-aging care! Strengthen skin barrier with consistent moisturizing and nutrition"
+                    },
+                    products: "Recommend peptide, hyaluronic acid, ceramide products. Start using eye cream.",
+                    steps: [
+                        {emoji: "👁️", title: "Eye Care", text: "Start eye cream for eye area"},
+                        {emoji: "🔬", title: "Peptides", text: "Peptides that help collagen production"},
+                        {emoji: "💧", title: "Hyaluronic Acid", text: "Powerful hydrating ingredient"},
+                        {emoji: "🛡️", title: "Ceramides", text: "Skin barrier strengthening ingredient"}
+                    ],
+                    healthScore: 88
+                },
+                {
+                    skinAge: 28,
+                    status: "Skin Needing Care",
+                    description: "Late 20s skin where first aging signs may appear. Active care is needed from now on.",
+                    routine: {
+                        morning: "Gentle cleanser → Vitamin C serum → Niacinamide → Moisturizer → SPF50+ sunscreen",
+                        evening: "Oil→foam double cleansing → Retinol serum (every other day) → Peptide cream → Eye cream",
+                        weekly: "Twice weekly glycolic acid pads, weekly deep moisture mask",
+                        tips: "Start serious anti-aging care! Promote collagen production with retinol and peptides"
+                    },
+                    products: "Recommend retinol, peptide, adenosine products. Include neck and décolleté in care.",
+                    steps: [
+                        {emoji: "🔄", title: "Retinol", text: "Use retinol every other day for adaptation"},
+                        {emoji: "💪", title: "Peptides", text: "Peptides for elasticity improvement"},
+                        {emoji: "🎯", title: "Intensive Care", text: "Expand care to neck and décolleté"},
+                        {emoji: "⚡", title: "Booster", text: "Use boosters to enhance absorption"}
+                    ],
+                    healthScore: 82
+                },
+                {
+                    skinAge: 32,
+                    status: "Skin Requiring Active Care",
+                    description: "Early 30s skin where elasticity loss and fine lines begin. Systematic anti-aging care is needed.",
+                    routine: {
+                        morning: "Deep cleansing → Vitamin C 20% → Hyaluronic acid → Peptide cream → Strong sunscreen",
+                        evening: "Double cleansing → Retinol 0.5% → Niacinamide → Eye cream → Night cream",
+                        weekly: "Three times weekly exfoliation, twice weekly nutrition masks, monthly deep care masks",
+                        tips: "Time for high-concentration active ingredients! Gradually increase retinol concentration and combine with professional care"
+                    },
+                    products: "Recommend high-concentration retinol, Vitamin C, adenosine products. More effective when combined with professional treatments.",
+                    steps: [
+                        {emoji: "🎯", title: "High-Concentration Serums", text: "Effective high-concentration active ingredients"},
+                        {emoji: "💆", title: "Massage", text: "Facial massage to promote circulation"},
+                        {emoji: "🏥", title: "Professional Care", text: "Monthly dermatology care recommended"},
+                        {emoji: "🌙", title: "Night Intensive", text: "Intensive nutrition supply at night"}
+                    ],
+                    healthScore: 75
+                },
+                {
+                    skinAge: 35,
+                    status: "Intensive Care Skin",
+                    description: "Mid-30s when wrinkles and elasticity loss become noticeable. Intensive anti-aging care is needed.",
+                    routine: {
+                        morning: "Enzyme cleanser → High-concentration Vitamin C → Peptide booster → Collagen cream → SPF50+ sunscreen",
+                        evening: "Double cleansing → Retinol 1% → Adenosine serum → Neck cream → Rich night cream",
+                        weekly: "Three times weekly glycolic acid, twice weekly collagen masks, weekly LED care",
+                        tips: "Professional treatments and home care combination essential! Focus on collagen boosting and wrinkle improvement"
+                    },
+                    products: "Recommend high-concentration collagen, elastin, adenosine products. Also need dedicated neck and décolleté products.",
+                    steps: [
+                        {emoji: "🔬", title: "Collagen", text: "Focus on collagen production promoting ingredients"},
+                        {emoji: "💡", title: "LED Care", text: "Use LED mask at home"},
+                        {emoji: "🎭", title: "Mask Packs", text: "Regular use of high-nutrition masks"},
+                        {emoji: "🏥", title: "Treatments", text: "Time to consider lifting treatments"}
+                    ],
+                    healthScore: 68
+                },
+                {
+                    skinAge: 38,
+                    status: "Skin Needing Professional Care",
+                    description: "Late 30s when deep wrinkles and pigmentation appear. Professional care and systematic management needed.",
+                    routine: {
+                        morning: "Deep cleansing → Tretinoin alternative → Niacinamide 10% → Collagen cream → Strong sunscreen",
+                        evening: "Cleansing oil→foam → High-concentration retinol → Peptide serum → Eye cream → Nutrition cream",
+                        weekly: "Four times weekly exfoliation, three times weekly nutrition masks, twice monthly professional care",
+                        tips: "Perfect combination of dermatology treatments and home care! Regularly receive laser, peeling and other professional treatments"
+                    },
+                    products: "Recommend tretinoin, high-concentration peptides, growth factor products. Suggest using professional brand products.",
+                    steps: [
+                        {emoji: "💊", title: "Prescription Products", text: "Use dermatology prescription products"},
+                        {emoji: "⚡", title: "Radiofrequency", text: "Lifting radiofrequency treatments"},
+                        {emoji: "💉", title: "Botox", text: "Wrinkle management with botox"},
+                        {emoji: "🔬", title: "Growth Factors", text: "Use growth factor ingredient products"}
+                    ],
+                    healthScore: 60
+                },
+                {
+                    skinAge: 42,
+                    status: "Anti-Aging Intensive Skin",
+                    description: "Early 40s when serious aging progresses. Strong anti-aging care and professional treatments needed.",
+                    routine: {
+                        morning: "Enzyme cleanser → Vitamin C 30% → Growth factor serum → Lifting cream → Premium sunscreen",
+                        evening: "Double cleansing → Tretinoin → Peptide complex → Stem cell cream → Neck care",
+                        weekly: "Daily exfoliation, four times weekly masks, 2-3 times monthly dermatology treatments",
+                        tips: "Aggressive anti-aging essential! Combine cutting-edge ingredients like stem cells and growth factors with laser treatments"
+                    },
+                    products: "Recommend stem cell, growth factor, high-concentration peptide products. Consider using medical cosmetic lines.",
+                    steps: [
+                        {emoji: "🧬", title: "Stem Cells", text: "Improve regeneration with stem cell ingredients"},
+                        {emoji: "💎", title: "Premium Care", text: "Intensive input of luxury ingredients"},
+                        {emoji: "🔥", title: "Laser", text: "Fraxel, Ulthera laser treatments"},
+                        {emoji: "💆", title: "Professional Massage", text: "Lymphatic drainage massage"}
+                    ],
+                    healthScore: 52
+                },
+                {
+                    skinAge: 45,
+                    status: "Intensive Regeneration Care Skin",
+                    description: "Mid-40s when skin regeneration ability significantly decreases. Strong regeneration care and regular professional treatments essential.",
+                    routine: {
+                        morning: "Deep cleansing → High-concentration Vitamin C → Growth factors → Collagen booster → Anti-aging sunscreen",
+                        evening: "Triple cleansing → Retinoids → Peptide complex → Regeneration cream → Neck care",
+                        weekly: "Daily home peeling, five times weekly masks, 3-4 times monthly dermatology care",
+                        tips: "Maximizing regeneration is key! Consider aggressive treatments like stem cell therapy and thread lifting"
+                    },
+                    products: "Recommend medical regeneration creams, high-concentration growth factors, collagen boosters. Choose products after consulting with specialists.",
+                    steps: [
+                        {emoji: "🔄", title: "Regeneration", text: "Intensive care focusing on skin regeneration"},
+                        {emoji: "🧵", title: "Thread Lifting", text: "PDO thread lifting treatments"},
+                        {emoji: "💉", title: "Fillers", text: "Fillers for volume restoration"},
+                        {emoji: "⚕️", title: "Medical Care", text: "Regular dermatology management"}
+                    ],
+                    healthScore: 45
+                },
+                {
+                    skinAge: 50,
+                    status: "Comprehensive Anti-Aging Skin",
+                    description: "Mature 50-year-old skin where hormonal changes and aging accelerate. Comprehensive anti-aging strategy needed.",
+                    routine: {
+                        morning: "Gentle cleansing → Peptide toner → Growth factor serum → Lifting cream → Strong UV protection",
+                        evening: "Oil cleansing → Retinoids → Collagen booster → Hormone cream → Intensive nutrition cream",
+                        weekly: "Daily regeneration care, six times weekly masks, 4+ times monthly professional care",
+                        tips: "Time to consider hormone care too! Comprehensive management needed along with estrogen care"
+                    },
+                    products: "Recommend hormone balance care products, high-concentration regeneration creams, medical cosmetics. Specialist consultation essential.",
+                    steps: [
+                        {emoji: "⚖️", title: "Hormone Care", text: "Care considering hormone balance"},
+                        {emoji: "💎", title: "Luxury Care", text: "Intensive use of highest-grade ingredients"},
+                        {emoji: "🏥", title: "Regular Treatments", text: "4+ times monthly professional management"},
+                        {emoji: "🧬", title: "Customized Treatment", text: "Individual customized treatment program"}
+                    ],
+                    healthScore: 38
+                },
+                {
+                    skinAge: 52,
+                    status: "Post-Menopause Care Skin",
+                    description: "Early to mid-50s adapting to post-menopausal skin changes. New skincare approaches are needed.",
+                    routine: {
+                        morning: "Ultra-gentle cleansing → Ceramide toner → Growth factor serum → Lifting cream → Anti-aging sunscreen",
+                        evening: "Oil cleansing → Gentle retinol → Collagen booster → Intensive nutrition cream → Neck care",
+                        weekly: "Daily regeneration care, every other day masks, 5-6 times monthly professional treatments",
+                        tips: "Post-menopause skin adaptation period! Reduce irritation and focus on regeneration and nutrition supply"
+                    },
+                    products: "Recommend gentle high-nutrition products, ceramides, and collagen products. Consider the increased sensitivity of your skin.",
+                    steps: [
+                        {emoji: "🌸", title: "Gentle Care", text: "Gentle ingredients for sensitized skin"},
+                        {emoji: "🛡️", title: "Barrier Strengthening", text: "Repair skin barrier with ceramides"},
+                        {emoji: "💧", title: "Intensive Moisture", text: "Hydration becomes even more crucial"},
+                        {emoji: "⚕️", title: "Regular Checkups", text: "Regular dermatological checkups essential"}
+                    ],
+                    healthScore: 42
+                },
+                {
+                    skinAge: 55,
+                    status: "Mature Skin Maintenance",
+                    description: "Mid-50s requiring management focused on maintaining current condition and preventing deterioration.",
+                    routine: {
+                        morning: "Cream cleanser → Nutrition toner → Multi-peptide serum → Lifting cream → High-moisture sunscreen",
+                        evening: "Oil cleansing → Gentle cleansing → Collagen booster → High-nutrition cream → Neck care",
+                        weekly: "Daily nutrition care, every other day masks, 6 times monthly professional treatments",
+                        tips: "Maintenance is the goal! Minimize irritation and maximize nutrition and hydration"
+                    },
+                    products: "Recommend high-nutrition creams, multi-peptides, and collagen products. Choose products with gentle ingredients.",
+                    steps: [
+                        {emoji: "🥇", title: "Nutrition Focus", text: "Intensive supply of high-nutrition ingredients"},
+                        {emoji: "💎", title: "Premium Products", text: "Use highest-grade brand products"},
+                        {emoji: "🏥", title: "Regular Care", text: "6 times monthly professional skin treatments"},
+                        {emoji: "❤️", title: "Self-Care", text: "Stress management is also important"}
+                    ],
+                    healthScore: 40
+                },
+                {
+                    skinAge: 58,
+                    status: "Wise Skin Management",
+                    description: "Late 50s requiring wise skin management. Gentle, non-aggressive care is important.",
+                    routine: {
+                        morning: "Cream cleanser → Nutrition toner → Regeneration serum → High-moisture cream → Moisturizing sunscreen",
+                        evening: "Cream cleanser → Nutrition toner → Regeneration cream → High-nutrition cream",
+                        weekly: "Daily nutrition care, 3 times weekly masks, 4-6 times monthly professional treatments",
+                        tips: "Wise management! Focus on gentle, nourishing care rather than excessive stimulation"
+                    },
+                    products: "Recommend regeneration creams, high-moisture products, and nutrition masks. Choose products with soft textures.",
+                    steps: [
+                        {emoji: "🌅", title: "Regeneration Care", text: "Ingredients that support skin regeneration"},
+                        {emoji: "🌊", title: "Deep Hydration", text: "Minimize moisture loss"},
+                        {emoji: "🎯", title: "Targeted Care", text: "Focused care for problem areas"},
+                        {emoji: "😌", title: "Comfortable Care", text: "Non-stressful management approach"}
+                    ],
+                    healthScore: 38
+                },
+                {
+                    skinAge: 60,
+                    status: "Life-Experienced Beautiful Skin",
+                    description: "Beautiful mature skin at 60. Take good care of skin that reflects life's wisdom and experience.",
+                    routine: {
+                        morning: "Milk cleanser → Nutrition toner → Regeneration serum → High-moisture cream → Moisturizing sunscreen",
+                        evening: "Milk cleanser → Nutrition toner → Regeneration cream → Nutrition cream",
+                        weekly: "Daily moisture care, 2-3 times weekly masks, 4 times monthly professional treatments",
+                        tips: "Mature beauty! Embrace natural aging gracefully with comfortable and sustainable management"
+                    },
+                    products: "Recommend gentle cleansers, high-moisture creams, and nutrition masks. Prioritize non-irritating products.",
+                    steps: [
+                        {emoji: "💖", title: "Natural Beauty", text: "Pursue natural, authentic beauty"},
+                        {emoji: "🌸", title: "Gentle Care", text: "Non-irritating, gentle products"},
+                        {emoji: "💧", title: "Moisture Priority", text: "Hydration is most important"},
+                        {emoji: "✨", title: "Inner Radiance", text: "Inner beauty takes precedence"}
+                    ],
+                    healthScore: 35
+                },
+                {
+                    skinAge: 65,
+                    status: "Elegant Mature Skin",
+                    description: "Elegant mature skin at 65. Beautiful skin that reflects years of wisdom and life experience.",
+                    routine: {
+                        morning: "Milk cleanser → Nutrition toner → Moisture serum → Nutrition cream → Gentle sunscreen",
+                        evening: "Milk cleanser → Nutrition toner → Nutrition cream",
+                        weekly: "Daily moisture care, twice weekly masks, 2-4 times monthly professional treatments",
+                        tips: "Elegant beauty! Maintain healthy skin with comfortable and sustainable care practices"
+                    },
+                    products: "Recommend ultra-gentle products, high-moisture creams, and nourishing oils. Choose products that don't burden the skin.",
+                    steps: [
+                        {emoji: "👑", title: "Elegance", text: "Grace and wisdom accumulated over years"},
+                        {emoji: "🕊️", title: "Peaceful Care", text: "Stress-free skincare management"},
+                        {emoji: "💝", title: "Self-Love", text: "A heart that cherishes oneself"},
+                        {emoji: "🌟", title: "Inner Beauty", text: "Radiance that comes from within"}
+                    ],
+                    healthScore: 32
+                }
+            ]
+        };
+
+        // 언어 전환 함수
+        function switchLanguage(lang) {
+            if (lang === currentLanguage) return;
+            
+            currentLanguage = lang;
+            
+            // 버튼 상태 업데이트
+            document.getElementById('koBtn').classList.toggle('active', lang === 'ko');
+            document.getElementById('enBtn').classList.toggle('active', lang === 'en');
+            
+            // HTML lang 속성 변경
+            document.getElementById('htmlLang').setAttribute('lang', lang);
+            
+            // 메타 데이터 업데이트
+            updateMetaData(lang);
+            
+            // 텍스트 업데이트
+            updateTexts(lang);
+            
+            // URL 파라미터 업데이트
+            try {
+                const url = new URL(window.location);
+                url.searchParams.set('lang', lang);
+                window.history.replaceState({}, '', url);
+            } catch (error) {
+                console.log('URL 업데이트를 건너뜁니다:', error.message);
+            }
+        }
+
+        // 메타 데이터 업데이트
+        function updateMetaData(lang) {
+            const texts = translations[lang];
+            
+            document.getElementById('pageTitle').textContent = texts.pageTitle;
+            document.getElementById('pageDescription').setAttribute('content', texts.pageDescription);
+            document.getElementById('ogTitle').setAttribute('content', texts.ogTitle);
+            document.getElementById('ogDescription').setAttribute('content', texts.ogDescription);
+            document.title = texts.pageTitle;
+        }
+
+        // 텍스트 업데이트
+        function updateTexts(lang) {
+            const texts = translations[lang];
+            
+            for (const [key, value] of Object.entries(texts)) {
+                const element = document.getElementById(key);
+                if (element) {
+                    if (element.tagName === 'OPTION') {
+                        element.textContent = value;
+                    } else if (element.tagName === 'INPUT' || element.tagName === 'BUTTON') {
+                        element.textContent = value;
+                    } else {
+                        element.innerHTML = value;
+                    }
+                }
+            }
+        }
+
+        // 분석 버튼 활성화 체크
+        function checkAnalyzeButton() {
+            const hasImage = window.currentImageData;
+            const hasGender = document.getElementById('genderSelect').value;
+            const hasAge = document.getElementById('ageInput').value;
+            const hasSkinType = document.getElementById('skinTypeSelect').value;
+            const hasConcern = document.getElementById('concernSelect').value;
+            
+            const analyzeBtn = document.getElementById('analyzeBtn');
+            analyzeBtn.disabled = !(hasImage && hasGender && hasAge && hasSkinType && hasConcern);
+        }
+
+        // 이미지 업로드 처리
+        document.getElementById('imageUpload').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            
+            if (file) {
+                if (!file.type.startsWith('image/')) {
+                    const message = currentLanguage === 'ko' 
+                        ? '이미지 파일만 업로드 가능합니다.'
+                        : 'Please upload only image files.';
+                    alert(message);
+                    return;
+                }
+                
+                if (file.size > 10 * 1024 * 1024) {
+                    const message = currentLanguage === 'ko' 
+                        ? '파일 크기는 10MB 이하여야 합니다.'
+                        : 'File size must be 10MB or less.';
+                    alert(message);
+                    return;
+                }
+                
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    const previewImage = document.getElementById('previewImage');
+                    const previewContainer = document.getElementById('previewContainer');
+                    
+                    previewImage.src = e.target.result;
+                    previewContainer.style.display = 'block';
+                    
+                    window.currentImageData = e.target.result;
+                    
+                    previewImage.onload = function() {
+                        checkAnalyzeButton();
+                        previewContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    };
+                };
+                
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // 입력 필드 이벤트 리스너들
+        document.getElementById('genderSelect').addEventListener('change', checkAnalyzeButton);
+        document.getElementById('ageInput').addEventListener('input', checkAnalyzeButton);
+        document.getElementById('skinTypeSelect').addEventListener('change', checkAnalyzeButton);
+        document.getElementById('concernSelect').addEventListener('change', checkAnalyzeButton);
+
+        // 드래그 앤 드롭 기능
+        const uploadSection = document.getElementById('uploadSection');
+        
+        uploadSection.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            uploadSection.classList.add('dragover');
+        });
+        
+        uploadSection.addEventListener('dragleave', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            uploadSection.classList.remove('dragover');
+        });
+        
+        uploadSection.addEventListener('drop', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            uploadSection.classList.remove('dragover');
+            
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                const file = files[0];
+                
+                if (!file.type.startsWith('image/')) {
+                    const message = currentLanguage === 'ko' 
+                        ? '이미지 파일만 업로드 가능합니다.'
+                        : 'Please upload only image files.';
+                    alert(message);
+                    return;
+                }
+                
+                const fileInput = document.getElementById('imageUpload');
+                const dt = new DataTransfer();
+                dt.items.add(file);
+                fileInput.files = dt.files;
+                
+                const event = new Event('change', { bubbles: true });
+                fileInput.dispatchEvent(event);
+            }
+        });
+
+        // 간단한 해시 함수
+        function simpleHash(str) {
+            let hash = 0;
+            for (let i = 0; i < str.length; i++) {
+                const char = str.charCodeAt(i);
+                hash = ((hash << 5) - hash) + char;
+                hash = hash & hash;
+            }
+            return Math.abs(hash);
+        }
+
+        // 피부 나이 계산 함수
+        function calculateSkinAge(imageData, gender, actualAge, skinType, concern) {
+            const combinedData = (imageData || '') + gender + actualAge + skinType + concern;
+            const hash = simpleHash(combinedData);
+            
+            const data = skinAgeData[currentLanguage];
+            
+            // 실제 나이를 기준으로 피부 나이 범위 조정
+            const age = parseInt(actualAge);
+            let ageModifier = 0;
+            
+            // 피부 타입과 고민에 따른 보정
+            if (skinType === '지성' || skinType === 'Oily') ageModifier -= 2;
+            if (skinType === '건성' || skinType === 'Dry') ageModifier += 1;
+            if (skinType === '민감성' || skinType === 'Sensitive') ageModifier += 2;
+            
+            if (concern === '주름/탄력' || concern === 'Wrinkles/Elasticity') ageModifier += 3;
+            if (concern === '색소침착' || concern === 'Pigmentation/Dark Spots') ageModifier += 2;
+            if (concern === '특별한 고민 없음' || concern === 'No Special Concerns') ageModifier -= 3;
+            
+            // 해시를 사용한 추가 랜덤 요소
+            const randomModifier = (hash % 11) - 5; // -5부터 +5까지
+            
+            const calculatedSkinAge = age + ageModifier + randomModifier;
+            
+            // 적절한 범위의 결과 찾기
+            let bestMatch = data[0];
+            let minDiff = Math.abs(data[0].skinAge - calculatedSkinAge);
+            
+            for (const item of data) {
+                const diff = Math.abs(item.skinAge - calculatedSkinAge);
+                if (diff < minDiff) {
+                    minDiff = diff;
+                    bestMatch = item;
+                }
+            }
+            
+            return bestMatch;
+        }
+
+        // 피부 나이 분석
+        function analyzeSkinAge() {
+            if (!window.currentImageData) {
+                const message = currentLanguage === 'ko' 
+                    ? '사진을 먼저 업로드해주세요!'
+                    : 'Please upload a photo first!';
+                alert(message);
+                return;
+            }
+            
+            const gender = document.getElementById('genderSelect').value;
+            const age = document.getElementById('ageInput').value;
+            const skinType = document.getElementById('skinTypeSelect').value;
+            const concern = document.getElementById('concernSelect').value;
+            
+            if (!gender || !age || !skinType || !concern) {
+                const message = currentLanguage === 'ko' 
+                    ? '모든 정보를 입력해주세요!'
+                    : 'Please fill in all information!';
+                alert(message);
+                return;
+            }
+            
+            // 나이 유효성 검사
+            if (age < 15 || age > 80) {
+                const message = currentLanguage === 'ko' 
+                    ? '나이는 15세에서 80세 사이로 입력해주세요!'
+                    : 'Please enter age between 15 and 80!';
+                alert(message);
+                return;
+            }
+            
+            document.getElementById('loading').style.display = 'block';
+            document.querySelector('.upload-section').style.display = 'none';
+            document.querySelector('.input-section').style.display = 'none';
+            
+            // Google Analytics 이벤트 추적
+            gtag('event', 'skin_age_analysis_start', {
+                event_category: 'engagement',
+                gender: gender,
+                age_group: Math.floor(age/10)*10 + 's',
+                skin_type: skinType,
+                concern: concern
+            });
+            
+            setTimeout(() => {
+                const selectedResult = calculateSkinAge(
+                    window.currentImageData, 
+                    gender, 
+                    age, 
+                    skinType, 
+                    concern
+                );
+                
+                displayResult(selectedResult, parseInt(age));
+                
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('resultSection').style.display = 'block';
+                
+                window.currentSkinResult = selectedResult;
+                window.currentUserInfo = { gender, age, skinType, concern };
+                
+                // 결과 이벤트 추적
+                gtag('event', 'skin_age_analysis_complete', {
+                    event_category: 'conversion',
+                    skin_age: selectedResult.skinAge,
+                    actual_age: age,
+                    age_difference: selectedResult.skinAge - age,
+                    health_score: selectedResult.healthScore
+                });
+                
+                document.getElementById('resultSection').scrollIntoView({behavior: 'smooth'});
+            }, 4000);
+        }
+
+        // 결과 표시 함수
+        function displayResult(result, actualAge) {
+            const ageDifference = result.skinAge - actualAge;
+            
+            document.getElementById('skinAgeDisplay').textContent = result.skinAge + (currentLanguage === 'ko' ? '세' : ' years old');
+            document.getElementById('skinStatus').textContent = result.status;
+            document.getElementById('skinDescription').textContent = result.description;
+            
+            const scoreText = currentLanguage === 'ko' 
+                ? `🌟 피부 건강도: ${result.healthScore}점`
+                : `🌟 Skin Health Score: ${result.healthScore}/100`;
+            document.getElementById('skinScore').textContent = scoreText;
+            
+            // 루틴 정보 업데이트
+            document.getElementById('morningRoutineText').textContent = result.routine.morning;
+            document.getElementById('eveningRoutineText').textContent = result.routine.evening;
+            document.getElementById('weeklyRoutineText').textContent = result.routine.weekly;
+            document.getElementById('specialTipsText').textContent = result.routine.tips;
+            
+            document.getElementById('productRecommendationText').textContent = result.products;
+            
+            // 단계별 관리법 표시
+            const stepsGrid = document.getElementById('stepsGrid');
+            stepsGrid.innerHTML = '';
+            result.steps.forEach(step => {
+                const item = document.createElement('div');
+                item.className = 'step-item';
+                item.innerHTML = `
+                    <div class="step-emoji">${step.emoji}</div>
+                    <div class="step-title">${step.title}</div>
+                    <div class="step-text">${step.text}</div>
+                `;
+                stepsGrid.appendChild(item);
+            });
+            
+            // 나이 차이에 따른 추가 메시지
+            if (ageDifference <= -5) {
+                const message = document.createElement('div');
+                message.style.cssText = 'background: linear-gradient(45deg, #98FB98, #90EE90); padding: 1rem; border-radius: 15px; margin: 1rem 0; text-align: center; color: #006400; font-weight: bold;';
+                message.innerHTML = currentLanguage === 'ko' 
+                    ? `🎉 축하합니다! 피부 나이가 실제 나이보다 ${Math.abs(ageDifference)}세나 어려 보여요!`
+                    : `🎉 Congratulations! Your skin looks ${Math.abs(ageDifference)} years younger than your actual age!`;
+                
+                const resultSection = document.getElementById('resultSection');
+                resultSection.insertBefore(message, resultSection.children[2]);
+            } else if (ageDifference >= 5) {
+                const message = document.createElement('div');
+                message.style.cssText = 'background: linear-gradient(45deg, #FFE4B5, #FFDAB9); padding: 1rem; border-radius: 15px; margin: 1rem 0; text-align: center; color: #8B4513; font-weight: bold;';
+                message.innerHTML = currentLanguage === 'ko' 
+                    ? `⚠️ 피부 나이가 실제 나이보다 ${ageDifference}세 높게 나왔어요. 집중 관리가 필요합니다!`
+                    : `⚠️ Your skin age is ${ageDifference} years higher than your actual age. Intensive care is needed!`;
+                
+                const resultSection = document.getElementById('resultSection');
+                resultSection.insertBefore(message, resultSection.children[2]);
+            }
+        }
+
+        // 공유용 이미지 생성
+        function generateShareImage() {
+            if (!window.currentSkinResult) {
+                const message = currentLanguage === 'ko' 
+                    ? '먼저 피부 나이 분석을 완료해주세요!'
+                    : 'Please complete skin age analysis first!';
+                alert(message);
+                return null;
+            }
+
+            const canvas = document.getElementById('shareCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // 배경 그라디언트
+            const gradient = ctx.createLinearGradient(0, 0, 0, 800);
+            gradient.addColorStop(0, '#FFE5F1');
+            gradient.addColorStop(0.5, '#FFB7D3');
+            gradient.addColorStop(1, '#FFA8CC');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 600, 800);
+            
+            // 반투명 흰색 배경
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
+            roundRect(ctx, 50, 100, 500, 600, 20);
+            ctx.fill();
+            
+            // 제목
+            ctx.fillStyle = '#333';
+            ctx.font = 'bold 32px Arial, sans-serif';
+            ctx.textAlign = 'center';
+            const title = currentLanguage === 'ko' 
+                ? '🧴 AI 피부 나이 테스트'
+                : '🧴 AI Skin Age Test';
+            ctx.fillText(title, 300, 160);
+            
+            // 피부 나이
+            ctx.font = '120px Arial, sans-serif';
+            ctx.fillStyle = '#FF69B4';
+            const ageText = currentLanguage === 'ko' 
+                ? `${window.currentSkinResult.skinAge}세`
+                : `${window.currentSkinResult.skinAge} years`;
+            ctx.fillText(ageText, 300, 280);
+            
+            // 피부 상태
+            ctx.fillStyle = '#FF69B4';
+            ctx.font = 'bold 24px Arial, sans-serif';
+            ctx.fillText(window.currentSkinResult.status, 300, 320);
+            
+            // 설명
+            ctx.fillStyle = '#555';
+            ctx.font = '18px Arial, sans-serif';
+            ctx.textAlign = 'center';
+            wrapText(ctx, window.currentSkinResult.description, 300, 380, 400, 25);
+            
+            // 건강도 점수
+            ctx.fillStyle = '#FF69B4';
+            ctx.font = 'bold 28px Arial, sans-serif';
+            const scoreText = currentLanguage === 'ko' 
+                ? `🌟 피부 건강도: ${window.currentSkinResult.healthScore}점`
+                : `🌟 Health Score: ${window.currentSkinResult.healthScore}/100`;
+            ctx.fillText(scoreText, 300, 500);
+            
+            // 하단 URL
+            ctx.fillStyle = '#999';
+            ctx.font = '18px Arial, sans-serif';
+            const urlText = currentLanguage === 'ko' 
+                ? '🧴 AI 피부 나이 테스트에서 더 많은 분석을!'
+                : '🧴 Get more analysis at AI Skin Age Test!';
+            ctx.fillText(urlText, 300, 650);
+            
+            return canvas.toDataURL('image/png');
+        }
+
+        // 텍스트 줄바꿈 함수
+        function wrapText(context, text, x, y, maxWidth, lineHeight) {
+            const words = text.split(' ');
+            let line = '';
+            let lines = [];
+            
+            for (let n = 0; n < words.length; n++) {
+                const testLine = line + words[n] + ' ';
+                const metrics = context.measureText(testLine);
+                const testWidth = metrics.width;
+                
+                if (testWidth > maxWidth && n > 0) {
+                    lines.push(line);
+                    line = words[n] + ' ';
+                } else {
+                    line = testLine;
+                }
+            }
+            lines.push(line);
+            
+            for (let i = 0; i < lines.length; i++) {
+                context.fillText(lines[i], x, y + (i * lineHeight));
+            }
+            
+            return lines;
+        }
+
+        // Canvas RoundRect Polyfill
+        function roundRect(ctx, x, y, w, h, r) {
+            if (w < 2 * r) r = w / 2;
+            if (h < 2 * r) r = h / 2;
+            ctx.beginPath();
+            ctx.moveTo(x + r, y);
+            ctx.arcTo(x + w, y, x + w, y + h, r);
+            ctx.arcTo(x + w, y + h, x, y + h, r);
+            ctx.arcTo(x, y + h, x, y, r);
+            ctx.arcTo(x, y, x + w, y, r);
+            ctx.closePath();
+            return ctx;
+        }
+
+        function shareToKakao() {
+            if (!window.currentSkinResult) {
+                const message = currentLanguage === 'ko' 
+                    ? '먼저 피부 나이 분석을 완료해주세요!'
+                    : 'Please complete skin age analysis first!';
+                alert(message);
+                return;
+            }
+            
+            const shareText = `🧴 AI 피부 나이 테스트 결과!\n\n피부 나이: ${window.currentSkinResult.skinAge}세\n상태: ${window.currentSkinResult.status}\n\n${window.currentSkinResult.description}\n\n🌟 피부 건강도: ${window.currentSkinResult.healthScore}점\n\n나도 분석해보기: ${window.location.href}`;
+            copyToClipboard(shareText);
+        }
+
+        // 트위터 공유
+        function shareToTwitter() {
+            if (!window.currentSkinResult) {
+                const message = currentLanguage === 'ko' 
+                    ? '먼저 피부 나이 분석을 완료해주세요!'
+                    : 'Please complete skin age analysis first!';
+                alert(message);
+                return;
+            }
+
+            const shareText = currentLanguage === 'ko' 
+                ? `🧴 AI 피부 나이 테스트 결과: ${window.currentSkinResult.skinAge}세! 피부 건강도 ${window.currentSkinResult.healthScore}점 ✨`
+                : `🧴 AI Skin Age Test Result: ${window.currentSkinResult.skinAge} years old! Health Score: ${window.currentSkinResult.healthScore}/100 ✨`;
+            
+            const encodedText = encodeURIComponent(shareText);
+            const shareUrl = encodeURIComponent(window.location.href);
+            const hashtags = currentLanguage === 'ko' 
+                ? encodeURIComponent('피부나이테스트,스킨케어,뷰티테스트,AI피부분석')
+                : encodeURIComponent('SkinAgeTest,Skincare,BeautyTest,AISkinAnalysis');
+            
+            const twitterUrl = `https://twitter.com/intent/tweet?text=${encodedText}&url=${shareUrl}&hashtags=${hashtags}`;
+            window.open(twitterUrl, '_blank', 'width=600,height=400');
+        }
+
+        // 페이스북 공유
+        function shareToFacebook() {
+            if (!window.currentSkinResult) {
+                const message = currentLanguage === 'ko' 
+                    ? '먼저 피부 나이 분석을 완료해주세요!'
+                    : 'Please complete skin age analysis first!';
+                alert(message);
+                return;
+            }
+
+            const shareUrl = encodeURIComponent(window.location.href);
+            const shareText = currentLanguage === 'ko' 
+                ? `🧴 AI 피부 나이 테스트에서 ${window.currentSkinResult.skinAge}세가 나왔어요! 피부 건강도 ${window.currentSkinResult.healthScore}점`
+                : `🧴 I got ${window.currentSkinResult.skinAge} years old from AI Skin Age Test! Health Score: ${window.currentSkinResult.healthScore}/100`;
+            
+            const encodedText = encodeURIComponent(shareText);
+            const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${encodedText}`;
+            window.open(facebookUrl, '_blank', 'width=600,height=400');
+        }
+
+        // 인스타그램 공유
+        function shareToInstagram() {
+            if (!window.currentSkinResult) {
+                const message = currentLanguage === 'ko' 
+                    ? '먼저 피부 나이 분석을 완료해주세요!'
+                    : 'Please complete skin age analysis first!';
+                alert(message);
+                return;
+            }
+            
+            const shareImageData = generateShareImage();
+            if (!shareImageData) return;
+            
+            const link = document.createElement('a');
+            const fileName = currentLanguage === 'ko' 
+                ? `피부나이테스트_${window.currentSkinResult.skinAge}세.png`
+                : `SkinAgeTest_${window.currentSkinResult.skinAge}years.png`;
+            link.download = fileName;
+            link.href = shareImageData;
+            
+            if (/Mobi|Android/i.test(navigator.userAgent)) {
+                link.click();
+                setTimeout(() => {
+                    const instagramUrl = 'instagram://camera';
+                    window.location.href = instagramUrl;
+                    
+                    setTimeout(() => {
+                        window.open('https://www.instagram.com/', '_blank');
+                    }, 2000);
+                }, 3000);
+            } else {
+                link.click();
+                window.open('https://www.instagram.com/', '_blank');
+                const message = currentLanguage === 'ko' 
+                    ? '이미지가 다운로드되었습니다! 인스타그램에서 업로드해보세요 📷'
+                    : 'Image downloaded! Upload it to Instagram 📷';
+                alert(message);
+            }
+        }
+
+        // 일반 공유 (링크 복사)
+        function shareGeneral() {
+            if (!window.currentSkinResult) {
+                const message = currentLanguage === 'ko' 
+                    ? '먼저 피부 나이 분석을 완료해주세요!'
+                    : 'Please complete skin age analysis first!';
+                alert(message);
+                return;
+            }
+
+            const shareText = currentLanguage === 'ko' 
+                ? `🧴 AI 피부 나이 테스트 결과!\n\n피부 나이: ${window.currentSkinResult.skinAge}세\n상태: ${window.currentSkinResult.status}\n\n${window.currentSkinResult.description}\n\n🌟 피부 건강도: ${window.currentSkinResult.healthScore}점\n\n나도 분석해보기: ${window.location.href}`
+                : `🧴 AI Skin Age Test Result!\n\nSkin Age: ${window.currentSkinResult.skinAge} years\nStatus: ${window.currentSkinResult.status}\n\n${window.currentSkinResult.description}\n\n🌟 Health Score: ${window.currentSkinResult.healthScore}/100\n\nTry it yourself: ${window.location.href}`;
+            
+            if (navigator.share) {
+                const title = currentLanguage === 'ko' 
+                    ? '🧴 AI 피부 나이 테스트'
+                    : '🧴 AI Skin Age Test';
+                navigator.share({
+                    title: title,
+                    text: shareText,
+                    url: window.location.href
+                }).catch(error => {
+                    copyToClipboard(shareText);
+                });
+            } else {
+                copyToClipboard(shareText);
+            }
+        }
+
+        // 클립보드에 복사
+        function copyToClipboard(text) {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(() => {
+                    const message = currentLanguage === 'ko' 
+                        ? '🧴 피부 나이 테스트 결과가 복사되었습니다!\n\n원하는 곳에 붙여넣기해서 공유해보세요! ✨'
+                        : '🧴 Skin age test result copied to clipboard!\n\nPaste it anywhere to share! ✨';
+                    alert(message);
+                }).catch(error => {
+                    fallbackCopyToClipboard(text);
+                });
+            } else {
+                fallbackCopyToClipboard(text);
+            }
+        }
+
+        function fallbackCopyToClipboard(text) {
+            try {
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-999999px';
+                textArea.style.top = '-999999px';
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                
+                const successful = document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                if (successful) {
+                    const message = currentLanguage === 'ko' 
+                        ? '🧴 피부 나이 테스트 결과가 복사되었습니다!\n\n원하는 곳에 붙여넣기해서 공유해보세요! ✨'
+                        : '🧴 Skin age test result copied to clipboard!\n\nPaste it anywhere to share! ✨';
+                    alert(message);
+                } else {
+                    const message = currentLanguage === 'ko' 
+                        ? '복사에 실패했습니다. 수동으로 선택해서 복사해주세요.'
+                        : 'Copy failed. Please select and copy manually.';
+                    alert(message);
+                }
+            } catch (error) {
+                const message = currentLanguage === 'ko' 
+                    ? '복사에 실패했습니다. 수동으로 선택해서 복사해주세요.'
+                    : 'Copy failed. Please select and copy manually.';
+                alert(message);
+            }
+        }
+
+        function retakeTest() {
+            document.getElementById('resultSection').style.display = 'none';
+            document.querySelector('.upload-section').style.display = 'block';
+            document.querySelector('.input-section').style.display = 'block';
+            
+            // 입력 필드 초기화
+            document.getElementById('imageUpload').value = '';
+            document.getElementById('previewContainer').style.display = 'none';
+            document.getElementById('genderSelect').value = '';
+            document.getElementById('ageInput').value = '';
+            document.getElementById('skinTypeSelect').value = '';
+            document.getElementById('concernSelect').value = '';
+            
+            window.currentImageData = null;
+            window.currentSkinResult = null;
+            window.currentUserInfo = null;
+            
+            checkAnalyzeButton();
+        }
+
+        function saveResult() {
+            if (!window.currentSkinResult) {
+                const message = currentLanguage === 'ko' 
+                    ? '저장할 결과가 없습니다!'
+                    : 'No result to save!';
+                alert(message);
+                return;
+            }
+            
+            const resultData = {
+                skinResult: window.currentSkinResult,
+                userInfo: window.currentUserInfo,
+                timestamp: new Date().toISOString(),
+                url: window.location.href,
+                language: currentLanguage
+            };
+            
+            try {
+                localStorage.setItem('skinAgeTestResult', JSON.stringify(resultData));
+                const message = currentLanguage === 'ko' 
+                    ? '결과가 저장되었습니다! 💾\n\n언제든 다시 확인할 수 있어요.'
+                    : 'Result saved! 💾\n\nYou can check it anytime.';
+                alert(message);
+            } catch (e) {
+                const message = currentLanguage === 'ko' 
+                    ? '결과 저장에 실패했습니다. 스크린샷으로 저장해보세요! 📷'
+                    : 'Failed to save result. Try saving as screenshot! 📷';
+                alert(message);
+            }
+        }
+
+        function scrollToUpload() {
+            document.querySelector('.upload-section').scrollIntoView({behavior: 'smooth'});
+        }
+
+        // URL에서 언어 파라미터 확인
+        function checkLanguageFromURL() {
+            try {
+                const urlParams = new URLSearchParams(window.location.search);
+                const langParam = urlParams.get('lang');
+                
+                if (langParam === 'en') {
+                    switchLanguage('en');
+                } else if (langParam === 'ko') {
+                    switchLanguage('ko');
+                } else {
+                    // 브라우저 언어 감지
+                    const browserLang = navigator.language || navigator.userLanguage;
+                    if (browserLang.startsWith('en')) {
+                        switchLanguage('en');
+                    } else {
+                        switchLanguage('ko'); // 기본값
+                    }
+                }
+            } catch (error) {
+                console.log('URL 파라미터 확인을 건너뜁니다:', error.message);
+                switchLanguage('ko');
+            }
+        }
+
+        // 페이지 로드 시 초기화
+        document.addEventListener('DOMContentLoaded', function() {
+            // URL에서 언어 확인
+            checkLanguageFromURL();
+            
+            // 언어별 텍스트 설정
+            updateTexts(currentLanguage);
+            updateMetaData(currentLanguage);
+        });
+    </script>
+</body>
 </html>
