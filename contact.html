@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문의하기 - AI 피부 나이 테스트</title>
+    <meta name="description" content="AI 피부 나이 테스트 관련 문의사항이 있으시면 언제든지 연락주세요.">
+    
+    <style>
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #FFE5F1 0%, #FFB7D3 50%, #FFA8CC 100%);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        .header {
+            text-align: center;
+            background: rgba(255,255,255,0.95);
+            padding: 2rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #FF69B4, #FFB6C1);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .content {
+            background: rgba(255,255,255,0.95);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .contact-section {
+            margin-bottom: 2rem;
+        }
+        
+        .contact-section h2 {
+            color: #FF69B4;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .contact-card {
+            background: linear-gradient(45deg, #FFE5F1, #FFF0F5);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        .contact-card h3 {
+            color: #FF69B4;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-form {
+            background: linear-gradient(45deg, #F0F8FF, #FFE5F1);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #FF69B4;
+        }
+        
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #FFE5F1;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: #FF69B4;
+        }
+        
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(45deg, #FF69B4, #FFB6C1);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
+        }
+        
+        .faq-section {
+            margin-top: 2rem;
+        }
+        
+        .faq-item {
+            background: white;
+            margin: 1rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .faq-question {
+            background: #FF69B4;
+            color: white;
+            padding: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 1rem;
+            display: none;
+            background: #FFF8F0;
+        }
+        
+        .faq-answer.active {
+            display: block;
+        }
+        
+        .back-btn {
+            background: linear-gradient(45deg, #6c757d, #8a8a8a);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            transform: translateY(-2px);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .container { padding: 1rem; }
+            .header h1 { font-size: 2rem; }
+            .contact-info { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧴 문의하기</h1>
+            <p>AI 피부 나이 테스트에 대한 문의사항이 있으시면 언제든지 연락주세요!</p>
+        </div>
+        
+        <div class="content">
+            <div class="contact-section">
+                <h2>📞 070-7954-9057 </h2>
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>📧 이메일 문의</h3>
+                        <p><strong>이메일 문의:</strong> mgenwa100@gmail.com	</p>
+                        <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">
+                        </p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h3>⏰ 운영 시간</h3>
+                        <p><strong>평일:</strong> 오전 9시 - 오후 6시</p>
+                        <p><strong>주말:</strong> 오전 10시 - 오후 5시</p>
+                        <p><strong>공휴일:</strong> 휴무</p>
+                        <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">
+                            한국 시간(KST) 기준입니다.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h3>📧 문의 방법</h3>
+                    <p>아래 이메일 주소로 직접 문의주시거나, 운영시간 내에 전화로 연락주세요.</p>
+                    <p style="margin-top: 1rem;">
+                        <strong>빠른 답변을 원하시면</strong> 문의 유형을 제목에 명시해주세요.<br>
+                        예: [기술지원] 사진 업로드 오류, [일반문의] 서비스 이용 방법
+                    </p>
+                </div>
+            </div>
+            
+            <div class="faq-section">
+                <h2>❓ 자주 묻는 질문</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>테스트 결과가 정확한가요?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>AI 피부 나이 테스트는 최신 인공지능 기술을 활용하여 94.3%의 정확도를 제공합니다. 하지만 이는 참고용이며, 정확한 피부 진단은 전문의와 상담하시기 바랍니다.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>개인정보는 안전한가요?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>업로드된 사진과 개인정보는 분석 후 즉시 삭제되며, 어떠한 목적으로도 저장하거나 공유하지 않습니다. 자세한 내용은 개인정보처리방침을 참고해주세요.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>테스트에 비용이 발생하나요?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>현재 모든 테스트는 완전 무료로 제공됩니다. 앞으로도 기본 기능은 무료로 유지할 예정입니다.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>모바일에서도 사용할 수 있나요?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>네! 모든 기기(PC, 스마트폰, 태블릿)에서 원활하게 사용하실 수 있습니다. 특히 모바일 환경에 최적화되어 있습니다.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>다른 AI 테스트도 예정되어 있나요?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>네! 퍼스널 컬러 진단, 헤어스타일 추천, 메이크업 스타일 분석 등 다양한 뷰티 AI 테스트를 순차적으로 출시할 예정입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <a href="index.html" class="back-btn">🏠 메인으로 돌아가기</a>
+    </div>
+    
+    <script>
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('span:last-child');
+            
+            if (answer.classList.contains('active')) {
+                answer.classList.remove('active');
+                icon.textContent = '+';
+            } else {
+                // 다른 FAQ 닫기
+                document.querySelectorAll('.faq-answer.active').forEach(item => {
+                    item.classList.remove('active');
+                });
+                document.querySelectorAll('.faq-question span:last-child').forEach(item => {
+                    item.textContent = '+';
+                });
+                
+                answer.classList.add('active');
+                icon.textContent = '-';
+            }
+        }
+    </script>
+</body>
+</html>
