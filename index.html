@@ -4,30 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="pageTitle">🧴 AI 피부 나이 테스트 | 스킨케어 관리법 추천</title>
-    <meta name="description" content="AI가 분석하는 정확한 피부 나이 테스트! 피부 상태 분석과 맞춤형 스킨케어 루틴을 추천받아보세요" id="pageDescription">
+    <meta name="description" content="AI가 분석하는 피부 나이 테스트! 피부 상태 분석과 맞춤형 스킨케어 루틴을 추천받아보세요" id="pageDescription">
     <meta name="keywords" content="피부나이테스트,스킨케어,피부분석,AI피부진단,뷰티테스트,피부관리,안티에이징,skincare,skin age test">
     
     <!-- Open Graph -->
     <meta property="og:title" content="🧴 AI 피부 나이 테스트 - 스킨케어 관리법 추천" id="ogTitle">
-    <meta property="og:description" content="AI가 분석하는 정확한 피부 나이 측정과 맞춤형 스킨케어 루틴 추천!" id="ogDescription">
+    <meta property="og:description" content="AI가 분석하는 피부 나이 측정과 맞춤형 스킨케어 루틴 추천!" id="ogDescription">
     <meta property="og:image" content="https://your-domain.com/skin-age-og.jpg">
     <meta property="og:url" content="https://your-domain.com">
     
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8D76GWNXCK"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G25HV67JG6"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-8D76GWNXCK');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G25HV67JG6');
     </script>
 
+    <!-- google adsence -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4061187011060033"
      crossorigin="anonymous"></script>
 
     <!-- 카카오 SDK -->
     <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"></script>
+
+    <!-- Kakao AdFit -->
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
 
     <style>
         * {
@@ -152,6 +155,222 @@
             border: 1px solid rgba(255, 105, 180, 0.3);
         }
         
+                /* AI 분석 원리 설명 섹션 */
+        .explanation-section {
+            background: rgba(255,255,255,0.95);
+            padding: 2rem 1.5rem;
+            border-radius: 20px;
+            margin: 1rem 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .explanation-section h2 {
+            color: #FF1493;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+        }
+
+        .explanation-content {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .explanation-content p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        /* 샘플 결과 카드 섹션 */
+        .sample-results {
+            background: rgba(255,255,255,0.95);
+            padding: 2rem 1.5rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .sample-results h2 {
+            color: #FF1493;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+        }
+
+        .sample-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .sample-card {
+            background: linear-gradient(45deg, #FFF8DC, #F0F8FF, #FFE4E1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,182,193,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sample-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(45deg, #FF69B4, #FFD700, #FF1493);
+        }
+
+        .sample-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 105, 180, 0.2);
+        }
+
+        .sample-avatar {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: gentle-bounce 3s ease-in-out infinite;
+        }
+
+        .sample-card h3 {
+            color: #FF1493;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .sample-job {
+            color: #FF69B4;
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+        }
+
+        .sample-match {
+            background: linear-gradient(45deg, #FF69B4, #FFD700);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            margin: 1rem 0;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .sample-desc {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-top: 1rem;
+        }
+
+        /* 샘플 결과 카드 섹션 */
+        .sample-results {
+            background: rgba(255,255,255,0.95);
+            padding: 2rem 1.5rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .sample-results h2 {
+            color: #FF1493;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+        }
+
+        .sample-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .sample-card {
+            background: linear-gradient(45deg, #FFF8DC, #F0F8FF, #FFE4E1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,182,193,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sample-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(45deg, #FF69B4, #FFD700, #FF1493);
+        }
+
+        .sample-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 105, 180, 0.2);
+        }
+
+        .sample-avatar {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: gentle-bounce 3s ease-in-out infinite;
+        }
+
+        .sample-card h3 {
+            color: #FF1493;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .sample-job {
+            color: #FF69B4;
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+        }
+
+        .sample-match {
+            background: linear-gradient(45deg, #FF69B4, #FFD700);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            margin: 1rem 0;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .sample-desc {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-top: 1rem;
+        }
+
+        .horizontal-ads {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: nowrap; /* ✅ 줄바꿈 방지 */
+            margin: 2rem 0;
+        }
+
+        .horizontal-ad-item {
+            flex: 0 0 250px;
+            height: 250px;
+            background: #f9f9f9;
+        }
+
         .upload-section {
             background: rgba(255,255,255,0.95);
             padding: 1.5rem;
@@ -604,18 +823,164 @@
         <!-- 헤더 -->
         <div class="header">
             <h1 id="mainTitle">🧴 AI 피부 나이 테스트</h1>
-            <p id="mainSubtitle">AI가 당신의 얼굴을 분석해 정확한 피부 나이와 맞춤형 스킨케어 루틴을 추천해드립니다!</p>
+            <p id="mainSubtitle">AI가 얼굴 사진을 분석해 피부 나이와 맞춤형 스킨케어 루틴을 추천해드려요!</p>
             <div class="stats">
                 <span class="stat-item" id="stat1">📊 누적 분석 456,789명</span>
-                <span class="stat-item" id="stat2">🎯 정확도 94.3%</span>
-                <span class="stat-item" id="stat3">⭐ 만족도 4.9/5</span>
+                <span class="stat-item" id="stat2">🎯 무료 테스트</span>
+                <span class="stat-item" id="stat3">⭐ 엔터데인먼트</span>
             </div>
         </div>
+
+         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4061187011060033"
+        crossorigin="anonymous"></script>
+        <!-- 피부 나이 테스트 헤더 -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-4061187011060033"
+            data-ad-slot="2457899456"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
         
+         <!-- 분석 원리 섹션 -->
+        <div class="related-tests">
+            <h2 id="analysisTitle">🔬 AI 분석 원리</h2>
+            <div style="background: linear-gradient(45deg, #FFF8DC, #FFE5F1); padding: 1.5rem; border-radius: 15px; margin: 1rem 0; text-align: left;">
+                <h3 style="color: #FF69B4; margin-bottom: 1rem;" id="howItWorksTitle">🧠 어떻게 분석할까요?</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                    <div style="background: white; padding: 1rem; border-radius: 10px; border: 1px solid rgba(255, 105, 180, 0.2);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">📸</div>
+                        <h4 style="color: #FF69B4; margin-bottom: 0.5rem;" id="step1Title">1단계: 얼굴 인식</h4>
+                        <p style="font-size: 0.9rem; color: #666;" id="step1Desc">AI가 얼굴의 주요 특징점을 인식하고 피부 질감, 톤, 탄력도를 분석합니다</p>
+                    </div>
+                    <div style="background: white; padding: 1rem; border-radius: 10px; border: 1px solid rgba(255, 105, 180, 0.2);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🧮</div>
+                        <h4 style="color: #FF69B4; margin-bottom: 0.5rem;" id="step2Title">2단계: 데이터 비교</h4>
+                        <p style="font-size: 0.9rem; color: #666;" id="step2Desc">입력된 개인정보와 피부 데이터베이스를 비교 분석합니다</p>
+                    </div>
+                    <div style="background: white; padding: 1rem; border-radius: 10px; border: 1px solid rgba(255, 105, 180, 0.2);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎯</div>
+                        <h4 style="color: #FF69B4; margin-bottom: 0.5rem;" id="step3Title">3단계: 맞춤 추천</h4>
+                        <p style="font-size: 0.9rem; color: #666;" id="step3Desc">분석 결과를 바탕으로 개인별 최적화된 스킨케어 루틴을 제안합니다</p>
+                    </div>
+                </div>
+                <div style="margin-top: 1rem; padding: 1rem; background: rgba(255, 105, 180, 0.1); border-radius: 10px; border-left: 4px solid #FF69B4;">
+                    <p style="font-size: 0.9rem; color: #555; margin: 0;" id="accuracyNote">
+                        <strong id="accuracyTitle">⭐주의 사항:</strong> <span id="accuracyDesc">분석 결과는 참고용입니다. 정확한 피부 진단은 전문의와 상담해 주세요! </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 샘플 결과 섹션 -->
+        <div class="related-tests">
+            <h2 id="samplesTitle">📊 분석 샘플 결과</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin: 1rem 0;">
+                <!-- 샘플 1 -->
+                <div style="background: linear-gradient(45deg, #FFE5F1, #FFD6E8); padding: 1.5rem; border-radius: 15px; border: 1px solid rgba(255, 105, 180, 0.3);">
+                    <div style="text-align: center; margin-bottom: 1rem;">
+                        <div style="background: white; width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; border: 2px solid #FF69B4;">👩</div>
+                        <h3 style="color: #FF69B4; margin-bottom: 0.5rem;" id="sample1Title">김○○님 (28세 여성)</h3>
+                    </div>
+                    <div style="background: white; padding: 1rem; border-radius: 10px; margin-bottom: 1rem;">
+                        <div style="font-size: 2rem; color: #FF69B4; font-weight: bold; text-align: center;" id="sample1Age">24세</div>
+                        <div style="text-align: center; color: #FF69B4; font-weight: bold;" id="sample1Status">건강한 젊은 피부</div>
+                        <div style="text-align: center; margin-top: 0.5rem; font-size: 1.2rem; color: #FF69B4;" id="sample1Score">🌟 건강도: 92점</div>
+                    </div>
+                    <div style="font-size: 0.9rem; color: #666; line-height: 1.4;">
+                        <p style="margin-bottom: 0.5rem;"><strong id="sample1TypeLabel">피부타입:</strong> <span id="sample1Type">복합성</span></p>
+                        <p style="margin-bottom: 0.5rem;"><strong id="sample1ConcernLabel">주요고민:</strong> <span id="sample1Concern">모공/블랙헤드</span></p>
+                        <p style="margin-bottom: 1rem;"><strong id="sample1ResultLabel">결과:</strong> <span id="sample1Result">실제 나이보다 4세 어려 보이는 건강한 상태</span></p>
+                        <div style="background: rgba(255, 105, 180, 0.1); padding: 0.8rem; border-radius: 8px;">
+                            <p style="font-size: 0.8rem; margin: 0; color: #555;" id="sample1Tip">💡 추천: 모공 관리를 위한 BHA 성분과 충분한 보습 관리</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 샘플 2 -->
+                <div style="background: linear-gradient(45deg, #E1F5FE, #B3E5FC); padding: 1.5rem; border-radius: 15px; border: 1px solid rgba(33, 150, 243, 0.3);">
+                    <div style="text-align: center; margin-bottom: 1rem;">
+                        <div style="background: white; width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; border: 2px solid #2196F3;">👨</div>
+                        <h3 style="color: #2196F3; margin-bottom: 0.5rem;" id="sample2Title">박○○님 (35세 남성)</h3>
+                    </div>
+                    <div style="background: white; padding: 1rem; border-radius: 10px; margin-bottom: 1rem;">
+                        <div style="font-size: 2rem; color: #2196F3; font-weight: bold; text-align: center;" id="sample2Age">38세</div>
+                        <div style="text-align: center; color: #2196F3; font-weight: bold;" id="sample2Status">집중 관리 필요 피부</div>
+                        <div style="text-align: center; margin-top: 0.5rem; font-size: 1.2rem; color: #2196F3;" id="sample2Score">🌟 건강도: 75점</div>
+                    </div>
+                    <div style="font-size: 0.9rem; color: #666; line-height: 1.4;">
+                        <p style="margin-bottom: 0.5rem;"><strong id="sample2TypeLabel">피부타입:</strong> <span id="sample2Type">건성</span></p>
+                        <p style="margin-bottom: 0.5rem;"><strong id="sample2ConcernLabel">주요고민:</strong> <span id="sample2Concern">주름/탄력</span></p>
+                        <p style="margin-bottom: 1rem;"><strong id="sample2ResultLabel">결과:</strong> <span id="sample2Result">실제 나이보다 3세 높게 측정, 적극적 관리 권장</span></p>
+                        <div style="background: rgba(33, 150, 243, 0.1); padding: 0.8rem; border-radius: 8px;">
+                            <p style="font-size: 0.8rem; margin: 0; color: #555;" id="sample2Tip">💡 추천: 레티놀과 펩타이드 성분으로 탄력 개선 집중 케어</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 1rem; padding: 1rem; background: rgba(255, 105, 180, 0.1); border-radius: 10px;">
+                <p style="font-size: 0.9rem; color: #666; margin: 0;" id="sampleNote">
+                    <strong id="sampleNoteTitle">📝 참고사항:</strong> <span id="sampleNoteDesc">위 샘플은 결과 예시입니다. 재미있는 테스트로 참고만 해주시고 정확한 진단은 전문의에게 받아주세요!</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- 광고 영역 컨테이너 -->
+        <div class="horizontal-ads">
+            <div class="horizontal-ad-item">
+                <ins class="kakao_ad_area" style="display:none;"
+                    data-ad-unit="DAN-gT8jvIdzd2yXImc3"
+                    data-ad-width="250"
+                    data-ad-height="250"
+                    data-ad-onfail="callBackFunc"></ins>
+            </div>
+
+            <div class="horizontal-ad-item">
+                <ins class="kakao_ad_area" style="display:none;"
+                    data-ad-unit="DAN-cshggCheE79FqcgG"
+                    data-ad-width="250"
+                    data-ad-height="250"
+                    data-ad-onfail="callBackFunc"></ins>
+            </div>
+
+            <div class="horizontal-ad-item">
+                <ins class="kakao_ad_area" style="display:none;"
+                    data-ad-unit="DAN-cpO0yDIuORfOtVkp"
+                    data-ad-width="250"
+                    data-ad-height="250"
+                    data-ad-onfail="callBackFunc"></ins>
+            </div>
+        </div>
+
+        <!-- 광고 표시 초기화 스크립트 -->
+        <script>
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const kakaoAds = document.querySelectorAll('.kakao_ad_area');
+                kakaoAds.forEach((ad, index) => {
+                 ad.style.display = 'block';
+                console.log(`카카오 광고 ${index + 1} 로드 시도`);
+                });
+            }, 2000);
+        });
+
+
+        // 광고 실패 시 대체 콘텐츠
+        function callBackFunc(reason) {
+            const fallback = document.createElement('div');
+            fallback.innerHTML = '<p style="text-align:center; color:#aaa;">광고를 불러올 수 없습니다.</p>';
+            document.querySelectorAll('.kakao_ad_area').forEach(ad => {
+                ad.replaceWith(fallback.cloneNode(true));
+            });
+        }
+        </script>
+
         <!-- 업로드 섹션 -->
         <div class="upload-section" id="uploadSection">
             <h2 id="uploadTitle">📸 얼굴 사진을 업로드하세요</h2>
-            <p id="uploadDesc">정면을 바라보는 자연광 셀카가 가장 정확한 분석이 가능해요!</p>
+            <p id="uploadDesc">정면을 바라보는 자연광 셀카를 추천해요!</p>
             <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;" id="uploadHint">
                 🧴 클릭하거나 이미지를 드래그해서 업로드하세요
             </p>
@@ -635,7 +1000,7 @@
         <!-- 개인정보 입력 섹션 -->
         <div class="input-section">
             <h2 id="inputTitle">📋 기본 정보를 입력하세요</h2>
-            <p id="inputDesc">더 정확한 피부 나이 분석을 위한 필수 정보들이에요</p>
+            <p id="inputDesc">피부 나이 분석을 위한 필수 정보들이에요</p>
             
             <div class="form-grid">
                 <div class="form-group">
@@ -744,9 +1109,9 @@
         <div class="related-tests">
             <h2 id="relatedTitle">🌟 다른 뷰티 테스트</h2>
             <div class="test-grid">
-                <a href="https://www.myauracolorcheck.site" class="test-card" target="_blank">
-                    <h3 id="relatedTest1">💄 오라 색상 테스트 </h3>
-                    <p id="relatedDesc1">당신만의 오라 색상을 찾아보세요</p>
+                <a href="#" class="test-card" target="_blank">
+                    <h3 id="relatedTest1">💄 퍼스널 컬러 진단</h3>
+                    <p id="relatedDesc1">나에게 어울리는 색상을 찾아보세요</p>
                 </a>
                 <a href="#" class="test-card" target="_blank">
                     <h3 id="relatedTest2">💅 네일 스타일 추천</h3>
@@ -762,7 +1127,8 @@
         <!-- 푸터 -->
         <div class="footer">
             <h3 id="footerTitle">🧴 AI 피부 나이 테스트</h3>
-            <p id="footerSubtitle">과학적 분석으로 건강한 피부 만들기! 🌟</p>
+            <p>운영자: 바인글로벌 | 이메일: hhhjbj@naver.com </p>
+            <p>본 서비스는 엔터테인먼트 목적의 무료 테스트입니다.</p>
             <div style="margin-top: 1rem; color: #666; font-size: 0.9rem;">
                 <a href="contact.html" id="contactLink">문의하기</a> | 
                 <a href="privacy.html" id="privacyLink">개인정보처리방침</a> | 
@@ -787,20 +1153,20 @@
         const translations = {
             ko: {
                 pageTitle: '🧴 AI 피부 나이 테스트 | 스킨케어 관리법 추천',
-                pageDescription: 'AI가 분석하는 정확한 피부 나이 테스트! 피부 상태 분석과 맞춤형 스킨케어 루틴을 추천받아보세요',
+                pageDescription: 'AI가 분석하는 피부 나이 테스트! 피부 상태 분석과 맞춤형 스킨케어 루틴을 추천받아보세요',
                 ogTitle: '🧴 AI 피부 나이 테스트 - 스킨케어 관리법 추천',
-                ogDescription: 'AI가 분석하는 정확한 피부 나이 측정과 맞춤형 스킨케어 루틴 추천!',
+                ogDescription: 'AI가 분석하는 피부 나이 측정과 맞춤형 스킨케어 루틴 추천!',
                 mainTitle: '🧴 AI 피부 나이 테스트',
-                mainSubtitle: 'AI가 당신의 얼굴을 분석해 정확한 피부 나이와 맞춤형 스킨케어 루틴을 추천해드립니다!',
+                mainSubtitle: 'AI가 당신의 얼굴을 분석해 피부 나이와 맞춤형 스킨케어 루틴을 추천해드립니다!',
                 stat1: '📊 누적 분석 456,789명',
                 stat2: '🎯 정확도 94.3%',
                 stat3: '⭐ 만족도 4.9/5',
                 uploadTitle: '📸 얼굴 사진을 업로드하세요',
-                uploadDesc: '정면을 바라보는 자연광 셀카가 가장 정확한 분석이 가능해요!',
+                uploadDesc: '정면을 바라보는 자연광 셀카를 추천합니다!',
                 uploadHint: '🧴 클릭하거나 이미지를 드래그해서 업로드하세요',
                 fileInputButton: '✨ 사진 선택하기',
                 inputTitle: '📋 기본 정보를 입력하세요',
-                inputDesc: '더 정확한 피부 나이 분석을 위한 필수 정보들이에요',
+                inputDesc: '피부 나이 분석을 위한 필수 정보들이에요',
                 genderLabel: '성별',
                 genderPlaceholder: '성별 선택',
                 genderMale: '남성',
